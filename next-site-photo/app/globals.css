@@ -36,6 +36,66 @@ a {
   text-decoration: none;
 }
 
+.center {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .center {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .center {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .center {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .center {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .center {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .center {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .center {
+    max-width: 2000px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .center {
+    max-width: 2800px;
+  }
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

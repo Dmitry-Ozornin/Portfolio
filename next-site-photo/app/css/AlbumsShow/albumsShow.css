@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+.portfolio {
+  margin-top: 10vh;
+  margin-bottom: 60px;
+}
+.portfolio__title {
+  font-family: "FontAboutHome", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+  /* Адаптивность для заголовка */
+}
+@media (max-width: 768px) {
+  .portfolio__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+.portfolio__albums {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  text-decoration: none;
+  /* Адаптивность для контейнера альбомов */
+}
+@media (max-width: 1200px) {
+  .portfolio__albums {
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__albums {
+    gap: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__albums {
+    gap: 20px;
+  }
+}
+.portfolio__albums__map {
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  /* Адаптивность для карточки альбома */
+}
+@media (max-width: 1200px) {
+  .portfolio__albums__map {
+    min-width: 320px;
+  }
+}
+@media (max-width: 992px) {
+  .portfolio__albums__map {
+    min-width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__albums__map {
+    min-width: 100%;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__albums__map {
+    max-width: 100%;
+  }
+}
+.portfolio__albums__image {
+  width: 500px;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 9px 8px rgba(3, 13, 21, 0.3);
+  /* Адаптивность для изображения */
+  /* Для очень маленьких экранов */
+}
+@media (max-width: 1200px) {
+  .portfolio__albums__image {
+    width: 450px;
+    height: 630px;
+  }
+}
+@media (max-width: 992px) {
+  .portfolio__albums__image {
+    width: 400px;
+    height: 560px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__albums__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__albums__image {
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 6px 4px rgba(3, 13, 21, 0.3);
+  }
+}
+@media (max-width: 360px) {
+  .portfolio__albums__image {
+    box-shadow: 0px 0px 4px 3px rgba(3, 13, 21, 0.3);
+  }
+}
+.portfolio__albums__title {
+  font-family: "FontAboutHome", sans-serif;
+  text-decoration: none;
+  margin-top: 15px;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  /* Адаптивность для заголовка карточки */
+}
+@media (max-width: 992px) {
+  .portfolio__albums__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__albums__title {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__albums__title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
+.portfolio__albums__about {
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 8px;
+  padding: 0 10px;
+  max-width: 500px;
+  /* Адаптивность для описания */
+}
+@media (max-width: 1200px) {
+  .portfolio__albums__about {
+    max-width: 450px;
+  }
+}
+@media (max-width: 992px) {
+  .portfolio__albums__about {
+    max-width: 400px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio__albums__about {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__albums__about {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+}
+
+/* Дополнительные адаптивные классы для разных размеров */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 0 15px;
+  }
+  .portfolio__albums__map {
+    /* На мобильных делаем карточки более компактными */
+    padding: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 0 10px;
+  }
+  .portfolio__title {
+    padding: 0 10px;
+  }
+  .portfolio__albums__map {
+    padding: 0 5px;
+  }
+}
+/* Для очень маленьких экранов (меньше 320px) */
+@media (max-width: 320px) {
+  .portfolio__title {
+    font-size: 24px;
+  }
+  .portfolio__albums {
+    gap: 15px;
+  }
+  .portfolio__albums__title {
+    font-size: 16px;
+  }
+  .portfolio__albums__about {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=albumsShow.css.map */

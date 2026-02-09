@@ -20,7 +20,7 @@ const Navigation = ({ navLinks }: Props) => {
         const isActive = pathName === link.href;
 
         return (
-          <Link key={link.label} href={link.href} className={isActive ? "theHeader__link_active" : "theHeader__link active"}>
+          <Link key={link.label} href={link.href} className={isActive ? "theHeader__link theHeader__link_active" : "theHeader__link active"}>
             {link.title}
           </Link>
         );

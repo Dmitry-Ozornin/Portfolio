@@ -1,6 +1,5 @@
 import { Navigation } from "./Navigation";
-import "../app/css/TheHeader/theHeader.css"
-import { title } from "process";
+import "../app/css/TheHeader/theHeader.css";
 
 const navItems = [
   { label: "Home", href: "/", title: "Главная" },

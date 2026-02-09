@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+.aboutMe {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  align-items: center;
+
+  &__box {
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      gap: 3rem;
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      max-width: 40rem;
+
+      &__greeting {
+        font-family: "FontAboutHome", sans-serif;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+
+      &__aboutMeText {
+        font-family: "FontAboutHome", sans-serif;
+        font-size: clamp(1rem, 1.3vw, 1.3rem);
+        line-height: 1.5;
+        text-align: justify;
+        max-width: 45rem;
+      }
+    }
+
+    &_photo {
+      @media (max-width: 768px) {
+        width: min(100%, 20rem);
+      }
+    }
+
+    &_toPrice {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      border: 1px solid #020202;
+      text-transform: uppercase;
+      line-height: 1.1;
+      font-weight: 500;
+      font-family: sans-serif;
+      color: #ffffff;
+      font-size: clamp(0.9rem, 1.1vw, 1rem);
+      background: linear-gradient(to top, #080808 0%, #191919 48%, #050505 49%, #050505 82%, #131313 100%);
+      border-color: hsl(0, 0%, 2%);
+      box-shadow:
+        inset 0 0 0.3rem 0.3rem #474747,
+        0 0 0.3rem 0.3rem rgba(0, 0, 0, 0.15);
+      text-shadow: 0.03rem 0.03rem 0.03rem #000;
+      border-radius: 1.5rem;
+      padding: 0.8rem 2rem;
+      transition: all 0.3s ease;
+      width: fit-content;
+
+      &:hover {
+        color: #ffffff;
+        background: linear-gradient(to top, #101010 0%, #212121 48%, #0d0d0d 49%, #0d0d0d 82%, #1b1b1b 100%);
+        border-color: hsl(0, 0%, 5%);
+        box-shadow:
+          inset 0 0 0.2rem 0.2rem #4d4d4d,
+          0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+        text-shadow: 0.03rem 0.03rem 0.03rem #000;
+        transform: translateY(-0.1rem);
+      }
+
+      &:active {
+        color: #ffffff;
+        background: linear-gradient(to top, #000 0%, #050505 100%);
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__inspiration {
+    font-family: "FontAboutHome", sans-serif;
+    text-align: center;
+    width: min(100%, 50rem);
+    padding-bottom: 1rem;
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #333;
+
+    &_title {
+      font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+
+    }
+
+    &:last-of-type {
+      padding-top: 1rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .aboutMe {
+    &__box {
+      gap: 2.5rem;
+
+      &_text {
+        &__greeting {
+          font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+        }
+
+        &__aboutMeText {
+          font-size: clamp(0.9rem, 1.2vw, 1rem);
+        }
+      }
+    }
+
+    &__inspiration {
+      width: min(100%, 40rem);
+      font-size: clamp(0.9rem, 1.2vw, 1rem);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutMe {
+    margin-top: 1.5rem;
+    padding-bottom: 3rem;
+
+    &__box {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      &_text {
+        gap: 1rem;
+        max-width: 100%;
+
+        &__greeting {
+          font-size: clamp(1.3rem, 4vw, 1.6rem);
+        }
+
+        &__aboutMeText {
+          font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+          padding: 0 0.8rem;
+          text-align: left;
+        }
+      }
+
+      &_toPrice {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+
+    &__inspiration {
+      width: min(100%, 30rem);
+      font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+      padding: 0 0.8rem 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutMe {
+    &__box {
+      &_text {
+        &__greeting {
+          font-size: clamp(1.1rem, 5vw, 1.3rem);
+        }
+
+        &__aboutMeText {
+          font-size: clamp(0.8rem, 3vw, 0.85rem);
+        }
+      }
+
+      &_toPrice {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+      }
+    }
+
+    &__inspiration {
+      font-size: clamp(0.8rem, 3vw, 0.85rem);
+    }
+  }
+}

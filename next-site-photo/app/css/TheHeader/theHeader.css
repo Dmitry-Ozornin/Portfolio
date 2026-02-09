@@ -1,4 +1,9 @@
-@charset "UTF-8";
+@font-face {
+  font-family: "FontForHeader";
+  src: url("/fonts/GreatVibes-Regular.woff"), url("/fonts/GreatVibes-Regular.woff2");
+  font-style: normal;
+  font-display: swap;
+}
 .theHeader {
   width: 100%;
   display: flex;
@@ -6,45 +11,48 @@
   position: absolute;
   z-index: 55;
   background-color: rgba(255, 255, 255, 0.1);
-  height: 6vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .theHeader__link {
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
   font-weight: 500;
-  font-family: "Arial", sans-serif;
+  font-family: "FontForHeader", sans-serif;
+  font-size: 48px;
+  position: relative;
+  display: inline-block;
 }
 .theHeader__link_active {
   text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-family: "Arial", sans-serif;
-  border-bottom: black 2px solid;
+}
+.theHeader__link_active::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2.2px;
+  background-color: #000000;
+  transform: scaleX(1);
+  transform-origin: center;
 }
 .theHeader__link_active:hover {
   cursor: default;
 }
-.theHeader__link {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-.theHeader__link::after {
+.theHeader__link:not(.theHeader__link_active)::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 2.2px;
   background-color: #000000;
-  transform: scaleX(0); /* Начинается с 0 */
-  transform-origin: center; /* Ключевая строка! */
+  transform: scaleX(0);
+  transform-origin: center;
   transition: transform 0.4s ease;
 }
-.theHeader__link:hover::after {
-  transform: scaleX(1); /* Расширяется от центра */
+.theHeader__link:not(.theHeader__link_active):hover::after {
+  transform: scaleX(1);
 }/*# sourceMappingURL=theHeader.css.map */
