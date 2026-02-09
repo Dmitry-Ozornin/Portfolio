@@ -100,7 +100,7 @@ const ShowNeedAlbum = ({ name }: Props) => {
                 className="ShowPhotosession__box_image"
                 alt={session.title}
               />
-              <h1 className="ShowPhotosession__box_title">{session.title}</h1>
+              <h1 className="ShowPhotosession__box_title" style={{textDecoration: "none"}}>{session.title}</h1>
             </Link>
           ))}
       </section>

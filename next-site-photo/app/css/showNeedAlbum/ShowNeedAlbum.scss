@@ -5,9 +5,13 @@
   font-style: italic;
   font-display: swap;
 }
+// a{
+//     text-decoration: none !important;
+// }
 .ShowPhotosession {
   display: flex;
   flex-direction: column;
+
   &__loading {
     margin-top: 10vh;
     text-align: center;
@@ -27,6 +31,7 @@
     margin-left: 10%;
     margin-right: 10%;
     justify-content: space-evenly;
+    text-decoration: none;
 
     &_image {
       border-radius: 20px;

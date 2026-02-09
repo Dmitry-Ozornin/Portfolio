@@ -24,8 +24,8 @@ const AlbumsShow = () => {
     <section className="portfolio">
       <h1 className="portfolio__title">Альбомы</h1>
       <section className="portfolio__albums">
-        {albums.map((album) => {
-        //   console.log(album.cover);
+        {albums.map((album, index) => {
+          //   console.log(album.cover);
           return (
             <Link key={album.name} id={album.name} href={`/gallery/${album.name}`} className="portfolio__albums__map">
               <Image
@@ -34,9 +34,15 @@ const AlbumsShow = () => {
                 style={{
                   objectFit: "cover",
                   width: "100%",
-                  height: "100%",
+                  height: "auto",
+                  opacity: 0,
+                  transition: "opacity 0.5s ease-in, transform 0.3s ease",
                 }}
-                loading="eager"
+                onLoad={(e) => {
+                  e.currentTarget.style.opacity = "1";
+                }}
+                loading={index > 3 ? "lazy" : "eager"}
+                priority={index < 3}
                 src={album.cover}
                 alt="Обложка альбома"
                 className="portfolio__albums__image"
