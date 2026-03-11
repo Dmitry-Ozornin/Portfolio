@@ -3,61 +3,54 @@
 
 import { bannerImage } from "../public/image/bannerImage/Baner.json";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.css";
-import Carousel from "react-bootstrap/Carousel";
-export default function BootstrapCarousel() {
-  const aspectRatio = 16 / 9;
-
-  // Breakpoints в rem
-  const breakpoints = {
-    xs: "20rem", // 320px
-    sm: "40rem", // 640px
-    md: "48rem", // 768px
-    lg: "64rem", // 1024px
-    xl: "80rem", // 1280px
-    xxl: "90rem", // 1440px
-  };
-
-  const sizes = `
-    (max-width: ${breakpoints.sm}) 100vw,
-    (max-width: ${breakpoints.md}) 100vw,
-    (max-width: ${breakpoints.lg}) 100vw,
-    (max-width: ${breakpoints.xl}) 100vw,
-    (max-width: ${breakpoints.xxl}) 100vw,
-    100vw
-  `;
-
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../app/css/BanerSlider/BanerSlider.css";
+export default function BannerSlider() {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 2000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ],
+  );
   return (
-    <div>
-      <Carousel controls={false} indicators={false}>
-        {bannerImage.map((imgHref) => {
-          return (
-            <Carousel.Item interval={2000} key={imgHref}>
-              <div
-                style={{
-                  position: "relative",
-                  width: "100vw",
-                  paddingTop: `${(1 / aspectRatio) * 100}%`,
-                  overflow: "hidden",
-                  maxHeight: "75rem", // 1200px
-                }}
-              >
-                <Image
-                  src={imgHref}
-                  alt="Banner image"
-                  fill
-                  sizes="(max-width: 375px) 100vw, (max-width: 425px) 100vw, (max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1440px) 100vw, (max-width: 1920px) 100vw, 100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                  priority
-                />
-              </div>
-            </Carousel.Item>
-          );
-        })}
-      </Carousel>
+    <div ref={sliderRef} className="keen-slider">
+      {bannerImage.map((imgHref) => {
+        return (
+          <div className="keen-slider__slide imageBox" key={imgHref}>
+            <Image src={imgHref} alt="Banner image" fill sizes="(max-width: 375px) 100vw, (max-width: 425px) 100vw, (max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1440px) 100vw, (max-width: 1920px) 100vw, 100vw" priority className="imageBox__image" />
+          </div>
+        );
+      })}
     </div>
   );
 }

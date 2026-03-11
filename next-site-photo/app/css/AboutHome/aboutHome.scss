@@ -5,54 +5,133 @@
   font-display: swap;
 }
 .aboutMe {
-  margin-top: 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 4rem;
-  align-items: center;
+  z-index: 5;
+  margin-top: 60px;
+  padding-bottom: 50px;
+
+  @media (max-width: 426px) {
+    margin-top: 20px;
+  }
 
   &__box {
+    margin-bottom: 60px;
     display: flex;
-    margin-bottom: 3rem;
-    gap: 4rem;
-    align-items: center;
+    justify-content: center;
+    gap: 100px;
 
+    @media (max-width: 1450px) {
+      gap: 40px;
+    }
+    @media (max-width: 1024px) {
+      gap: 30px;
+    }
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 2rem;
+      align-items: center;
+      gap: 10px;
     }
-
-    @media (max-width: 1024px) {
-      gap: 3rem;
+    @media (max-width: 380px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
     &_text {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 20px;
       align-items: center;
-      max-width: 40rem;
 
       &__greeting {
         font-family: "FontAboutHome", sans-serif;
         font-size: clamp(1.6rem, 3vw, 2.2rem);
         text-align: center;
         line-height: 1.2;
-        margin-bottom: 0.5rem;
+        @media (max-width: 2100px) {
+          font-size: 30px;
+        }
+
+        @media (max-width: 1450px) {
+          font-size: 36px;
+        }
+        @media (max-width: 769px) {
+          font-size: 30px;
+        }
+        @media (max-width: 426px) {
+          font-size: 26px;
+        }
       }
 
       &__aboutMeText {
         font-family: "FontAboutHome", sans-serif;
-        font-size: clamp(1rem, 1.3vw, 1.3rem);
-        line-height: 1.5;
+        font-size: 35px;
         text-align: justify;
-        max-width: 45rem;
+        width: 800px;
+        @media (max-width: 2100px) {
+          font-size: 25px;
+        }
+
+        @media (max-width: 1450px) {
+          font-size: 15px;
+          width: 500px;
+        }
+        @media (max-width: 769px) {
+          width: 480px;
+          font-size: 20px;
+        }
+
+        @media (max-width: 500px) {
+          width: 350px;
+          font-size: 16px;
+        }
+
+        @media (max-width: 400px) {
+          width: 280px;
+          font-size: 16px;
+        }
       }
     }
 
-    &_photo {
+    &_photoBox {
+      width: 800px;
+      height: 1200px;
+
+      position: relative;
+
+      &__img {
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      @media (max-width: 2100px) {
+        width: 500px;
+        height: 700px;
+      }
+
+      @media (max-width: 1450px) {
+        width: 500px;
+        height: 700px;
+      }
+      @media (max-width: 1070px) {
+        width: 400px;
+        height: 550px;
+      }
+
       @media (max-width: 768px) {
-        width: min(100%, 20rem);
+        width: 400px;
+        height: 600px;
+      }
+
+      @media (max-width: 500px) {
+        width: 380px;
+        height: 580px;
+      }
+
+      @media (max-width: 401px) {
+        width: 280px;
+        height: 500px;
       }
     }
 
@@ -64,7 +143,7 @@
       text-transform: uppercase;
       line-height: 1.1;
       font-weight: 500;
-      font-family: sans-serif;
+
       color: #ffffff;
       font-size: clamp(0.9rem, 1.1vw, 1rem);
       background: linear-gradient(to top, #080808 0%, #191919 48%, #050505 49%, #050505 82%, #131313 100%);
@@ -77,6 +156,7 @@
       padding: 0.8rem 2rem;
       transition: all 0.3s ease;
       width: fit-content;
+      margin-bottom: 20px;
 
       &:hover {
         color: #ffffff;
@@ -97,12 +177,12 @@
       }
 
       @media (max-width: 768px) {
-        padding: 0.6rem 1.5rem;
+        padding: 20px 40px;
         font-size: 0.85rem;
       }
 
       @media (max-width: 480px) {
-        padding: 0.5rem 1.2rem;
+        padding: 15px 15px;
         font-size: 0.8rem;
       }
     }
@@ -113,106 +193,43 @@
     text-align: center;
     width: min(100%, 50rem);
     padding-bottom: 1rem;
-    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    font-size: 30px;
     line-height: 1.5;
     margin: 0 auto;
     color: #333;
+    @media (max-width: 2100px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 1450px) {
+      font-size: 18px;
+    }
+    @media (max-width: 769px) {
+      font-size: 18px;
+      width: 600px;
+    }
+    @media (max-width: 500px) {
+      font-size: 18px;
+      width: 380px;
+    }
+    @media (max-width: 380px) {
+      font-size: 16px;
+      width: 280px;
+    }
 
     &_title {
       font-size: clamp(1.2rem, 2.5vw, 2.2rem);
-
+      @media (max-width: 1920px) {
+        font-size: 32px;
+      }
+      @media (max-width: 2100px) {
+        font-size: 25px;
+      }
     }
 
     &:last-of-type {
       padding-top: 1rem;
       padding-bottom: 0;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .aboutMe {
-    &__box {
-      gap: 2.5rem;
-
-      &_text {
-        &__greeting {
-          font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-        }
-
-        &__aboutMeText {
-          font-size: clamp(0.9rem, 1.2vw, 1rem);
-        }
-      }
-    }
-
-    &__inspiration {
-      width: min(100%, 40rem);
-      font-size: clamp(0.9rem, 1.2vw, 1rem);
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .aboutMe {
-    margin-top: 1.5rem;
-    padding-bottom: 3rem;
-
-    &__box {
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-
-      &_text {
-        gap: 1rem;
-        max-width: 100%;
-
-        &__greeting {
-          font-size: clamp(1.3rem, 4vw, 1.6rem);
-        }
-
-        &__aboutMeText {
-          font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-          padding: 0 0.8rem;
-          text-align: left;
-        }
-      }
-
-      &_toPrice {
-        font-size: 0.85rem;
-        padding: 0.6rem 1.5rem;
-      }
-    }
-
-    &__inspiration {
-      width: min(100%, 30rem);
-      font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-      padding: 0 0.8rem 0.8rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .aboutMe {
-    &__box {
-      &_text {
-        &__greeting {
-          font-size: clamp(1.1rem, 5vw, 1.3rem);
-        }
-
-        &__aboutMeText {
-          font-size: clamp(0.8rem, 3vw, 0.85rem);
-        }
-      }
-
-      &_toPrice {
-        font-size: 0.8rem;
-        padding: 0.5rem 1.2rem;
-      }
-    }
-
-    &__inspiration {
-      font-size: clamp(0.8rem, 3vw, 0.85rem);
     }
   }
 }

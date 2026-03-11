@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { TheHeader } from "@/components/TheHeader";
-
+import { TheFooter } from "@/components/TheFooter";
 
 export const metadata: Metadata = {
   title: "Фотограф Смирнова Диана",
@@ -18,6 +18,7 @@ export default function RootLayout({
       <body>
         <TheHeader />
         <main>{children}</main>
+        <TheFooter />
       </body>
     </html>
   );

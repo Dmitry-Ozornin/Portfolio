@@ -2,7 +2,7 @@ import { ShowNeedAlbum } from "@/components/NeedAlbum";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery",
+  title: `name`,
   description: "Welcome to our photography site",
 };
 

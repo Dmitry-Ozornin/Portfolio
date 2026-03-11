@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutHome() {
   return (
-    <section className="aboutMe center">
+    <section className="aboutMe">
       <section className="aboutMe__box">
         <article className="aboutMe__box_text">
           <h1 className="aboutMe__box_text__greeting">Привет</h1>
@@ -21,26 +21,21 @@ export default function AboutHome() {
             <br /> <br /> Для меня фотография — это о Вас! <br /> <br /> О настоящих эмоциях и сильных чувствах, о разном настроении и самочувствии, о стиле и простоте. <br /> <br /> Позвольте стать Вашим проводником в мир фотографии и сделать прекрасные кадры, которые захочется пересматривать!
           </p>
           <Link className="aboutMe__box_toPrice" href="/prices">
-            К прайсу
+            Стоимость и условия работы
           </Link>
         </article>
         {/* Исправленная строка: */}
-        <Image
-          className="aboutMe__box_photo"
-          src={Photograph} // Без .src
-          alt="Фотография фотографа"
-          width={1000} // Исходная ширина
-          height={800} // Исходная высота (сохраняем пропорции 3:4)
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
-          style={{
-            width: "500px",
-            height: "auto",
-            objectFit: "cover",
-            borderRadius: "8px",
-          }}
-          priority={true} // LCP изображение
-          quality={70} // Оптимальное качество
-        />
+        <div className="aboutMe__box_photoBox">
+          <Image
+            className="aboutMe__box_photoBox__img"
+            src={Photograph}
+            alt="Фотография фотографа"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+            priority={true}
+            quality={70} // Оптимальное качество
+          />
+        </div>
       </section>
       <p className="aboutMe__inspiration">В работе я вдохновляюсь своими клиентами, ведь в каждом вижу уникальную личность и красоту, которую и стараюсь передать через свои снимки.</p>
       <h2 className="aboutMe__inspiration aboutMe__inspiration_title">На моих фото — Вы настоящие!</h2>

@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+.price {
+  font-family: "FontAboutHome", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  @media (max-width: 1080px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 500px) {
+    margin-top: 20px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      margin-bottom: 40px;
+      font-size: 46px;
+      font-weight: 700;
+      @media (max-width: 1500px) {
+        font-size: 40px;
+      }
+      @media (max-width: 1080px) {
+        font-size: 36px;
+        text-align: center;
+      }
+      @media (max-width: 500px) {
+        font-size: 30px;
+        text-align: center;
+      }
+      @media (max-width: 400px) {
+        font-size: 28px;
+      }
+      @media (max-width: 330px) {
+        font-size: 24px;
+      }
+    }
+
+    &__about {
+      font-size: 26px;
+      text-align: center;
+      line-height: 1;
+      @media (max-width: 1500px) {
+        font-size: 24px;
+      }
+      @media (max-width: 1080px) {
+        font-size: 24px;
+        text-align: center;
+      }
+      @media (max-width: 500px) {
+        font-size: 22px;
+      }
+      @media (max-width: 400px) {
+        font-size: 20px;
+      }
+      @media (max-width: 330px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__conditions {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1080px) {
+      padding-top: 30px;
+    }
+    @media (max-width: 500px) {
+      padding-top: 20px;
+    }
+    &__title {
+      font-size: 38px;
+      @media (max-width: 500px) {
+        font-size: 26px;
+      }
+    }
+
+    &__workingСonditions {
+      &_text {
+        max-width: 1000px;
+        margin-top: 10px;
+        font-size: 26px;
+        @media (max-width: 1500px) {
+          font-size: 20px;
+        }
+        @media (max-width: 500px) {
+          font-size: 18px;
+        }
+        @media (max-width: 400px) {
+          font-size: 16px;
+        }
+        @media (max-width: 330px) {
+          font-size: 12px;
+        }
+        &_link {
+          color: black;
+          font-weight: 700;
+          padding-left: 7px;
+        }
+        &_fat {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &__theOrderOfWork {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 3000px;
+    background-color: #f7f7f7;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__box {
+      width: 300px;
+      @media (max-width: 1500px) {
+      }
+      @media (max-width: 1080px) {
+        width: 400px;
+      }
+      @media (max-width: 500px) {
+      }
+      @media (max-width: 400px) {
+      }
+      @media (max-width: 330px) {
+        max-width: 300px;
+      }
+
+      &__title {
+        color: #656565;
+        font-weight: inherit;
+        font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+        @media (max-width: 1500px) {
+          font-size: 40px;
+        }
+        @media (max-width: 1080px) {
+          font-size: 36px;
+          text-align: center;
+        }
+        @media (max-width: 500px) {
+          font-size: 30px;
+          text-align: center;
+        }
+        @media (max-width: 400px) {
+          font-size: 28px;
+        }
+        @media (max-width: 330px) {
+          font-size: 24px;
+        }
+      }
+      &__text {
+        @media (max-width: 1500px) {
+        }
+        @media (max-width: 1080px) {
+          text-align: center;
+        }
+        @media (max-width: 500px) {
+          text-align: center;
+        }
+        @media (max-width: 400px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

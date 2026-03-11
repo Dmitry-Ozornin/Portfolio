@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+.price {
+  font-family: "FontAboutHome", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+@media (max-width: 1080px) {
+  .price {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .price {
+    margin-top: 20px;
+  }
+}
+.price__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price__description__title {
+  margin-bottom: 40px;
+  font-size: 46px;
+  font-weight: 700;
+}
+@media (max-width: 1500px) {
+  .price__description__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  .price__description__title {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .price__description__title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .price__description__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 330px) {
+  .price__description__title {
+    font-size: 24px;
+  }
+}
+.price__description__about {
+  font-size: 26px;
+  text-align: center;
+  line-height: 1;
+}
+@media (max-width: 1500px) {
+  .price__description__about {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1080px) {
+  .price__description__about {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .price__description__about {
+    font-size: 22px;
+  }
+}
+@media (max-width: 400px) {
+  .price__description__about {
+    font-size: 20px;
+  }
+}
+@media (max-width: 330px) {
+  .price__description__about {
+    font-size: 18px;
+  }
+}
+.price__conditions {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  .price__conditions {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .price__conditions {
+    padding-top: 20px;
+  }
+}
+.price__conditions__title {
+  font-size: 38px;
+}
+@media (max-width: 500px) {
+  .price__conditions__title {
+    font-size: 26px;
+  }
+}
+.price__conditions__workingСonditions_text {
+  max-width: 1000px;
+  margin-top: 10px;
+  font-size: 26px;
+}
+@media (max-width: 1500px) {
+  .price__conditions__workingСonditions_text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .price__conditions__workingСonditions_text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .price__conditions__workingСonditions_text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 330px) {
+  .price__conditions__workingСonditions_text {
+    font-size: 12px;
+  }
+}
+.price__conditions__workingСonditions_text_link {
+  color: black;
+  font-weight: 700;
+  padding-left: 7px;
+}
+.price__conditions__workingСonditions_text_fat {
+  font-weight: 700;
+}
+.price__theOrderOfWork {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 3000px;
+  background-color: #f7f7f7;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.price__theOrderOfWork__box {
+  width: 300px;
+}
+@media (max-width: 1080px) {
+  .price__theOrderOfWork__box {
+    width: 400px;
+  }
+}
+@media (max-width: 330px) {
+  .price__theOrderOfWork__box {
+    max-width: 300px;
+  }
+}
+.price__theOrderOfWork__box__title {
+  color: #656565;
+  font-weight: inherit;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
+@media (max-width: 1500px) {
+  .price__theOrderOfWork__box__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  .price__theOrderOfWork__box__title {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .price__theOrderOfWork__box__title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .price__theOrderOfWork__box__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 330px) {
+  .price__theOrderOfWork__box__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1080px) {
+  .price__theOrderOfWork__box__text {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .price__theOrderOfWork__box__text {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .price__theOrderOfWork__box__text {
+    text-align: center;
+  }
+}/*# sourceMappingURL=aboutPrice.css.map */

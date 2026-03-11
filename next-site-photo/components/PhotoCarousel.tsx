@@ -1,67 +1,38 @@
 // npm install swiper
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import "../app/css/PhotoCaurosel/photoCarousel.css";
 import Image from "next/image";
-import { bannerImage } from "../public/image/bannerImage/Baner.json";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { carouselImage } from "../public/image/caruoselImage/Carousel.json";
+const animation = { duration: 18000, easing: (t: number) => t };
 export default function PhotoCarousel() {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    slides: {
+      perView: 4,
+      spacing: 15,
+    },
+
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+  });
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 " style={{ paddingTop: "6vh", background: "white" }}>
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={30}
-        slidesPerView={2}
-        watchOverflow={false}
-        navigation
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            scrollbar: {
-              el: ".swiper-scrollbar",
-              // hide: false,
-              // enabled: false,
-            },
-          },
-          768: {
-            slidesPerView: 2,
-            scrollbar: {
-              el: ".swiper-scrollbar",
-              // hide: false,
-              // enabled: false,
-            },
-          },
-          1024: {
-            slidesPerView: 3,
-            scrollbar: {
-              el: ".swiper-scrollbar",
-              // hide: false,
-              // enabled: false,
-            },
-          },
-        }}
-        className="mySwiper"
-      >
-        {bannerImage.map((src, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg group" style={{ height: "50vh" }}>
-              <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw " priority={index < 2} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div ref={sliderRef} className="keen-slider PhotoCarousel">
+      {carouselImage.map((src, index) => (
+        <div className="keen-slider__slide PhotoCarousel__image" key={index}>
+          <Image src={src} alt={`Slide ${index + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw " priority={index < 3} />
+        </div>
+      ))}
     </div>
   );
 }

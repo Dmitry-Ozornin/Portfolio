@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+.costOfFilming {
+  position: relative;
+}
+.costOfFilming__standard {
+  padding-top: 90px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .costOfFilming__standard {
+    padding-top: 30px;
+  }
+}
+.costOfFilming__standard__box {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.costOfFilming__standard__box_img {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+@media (max-width: 500px) {
+  .costOfFilming__standard__box_img {
+    width: 400px;
+    height: 450px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__standard__box_img {
+    width: 360px;
+    height: 400px;
+  }
+}
+@media (max-width: 330px) {
+  .costOfFilming__standard__box_img {
+    width: 300px;
+    height: 380px;
+  }
+}
+.costOfFilming__standard__box__description {
+  position: relative;
+}
+@media (max-width: 500px) {
+  .costOfFilming__standard__box__description {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__standard__box__description {
+    width: 300px;
+  }
+}
+@media (max-width: 330px) {
+  .costOfFilming__standard__box__description {
+    width: 280px;
+  }
+}
+.costOfFilming__certificate {
+  margin-top: 30px;
+  width: 1500px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__certificate {
+    width: 1000px;
+  }
+}
+@media (max-width: 1080px) {
+  .costOfFilming__certificate {
+    max-width: 800px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.costOfFilming__certificate_box {
+  max-width: 3000px;
+  display: flex;
+  justify-content: center;
+}
+.costOfFilming__certificate__title {
+  font-family: "FontAboutHome";
+  font-size: 40px;
+}
+@media (max-width: 1080px) {
+  .costOfFilming__certificate__title {
+    text-align: center;
+  }
+}
+.costOfFilming__certificate__text {
+  font-size: 18px;
+}
+@media (max-width: 1080px) {
+  .costOfFilming__certificate__text {
+    text-align: center;
+  }
+}
+.costOfFilming__weddingPackage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+}
+.costOfFilming__weddingPackage__title {
+  text-align: center;
+  font-family: "FontAboutHome";
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__title {
+    font-size: 24px;
+  }
+}
+.costOfFilming__weddingPackage__box_boxStyleTypeOne {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  .costOfFilming__weddingPackage__box_boxStyleTypeOne {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.costOfFilming__weddingPackage__box_boxStyleTypeTwo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  .costOfFilming__weddingPackage__box_boxStyleTypeTwo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.costOfFilming__weddingPackage__box__img {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__img {
+    width: 700;
+    height: 600px;
+  }
+}
+@media (max-width: 1080px) {
+  .costOfFilming__weddingPackage__box__img {
+    width: 700px;
+    height: 600px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__img {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__weddingPackage__box__img {
+    width: 360px;
+    height: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .costOfFilming__weddingPackage__box__img {
+    width: 300px;
+  }
+}
+.costOfFilming__weddingPackage__box__img_image1 {
+  -o-object-position: 0 -330px;
+     object-position: 0 -330px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__img_image1 {
+    -o-object-position: 0 -230px;
+       object-position: 0 -230px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__img_image1 {
+    -o-object-position: 0 -130px;
+       object-position: 0 -130px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__weddingPackage__box__img_image1 {
+    -o-object-position: 0 -110px;
+       object-position: 0 -110px;
+  }
+}
+@media (max-width: 360px) {
+  .costOfFilming__weddingPackage__box__img_image1 {
+    -o-object-position: 0 -90px;
+       object-position: 0 -90px;
+  }
+}
+.costOfFilming__weddingPackage__box__img_image2 {
+  -o-object-position: 0 -410px;
+     object-position: 0 -410px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__img_image2 {
+    -o-object-position: 0 -270px;
+       object-position: 0 -270px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__img_image2 {
+    -o-object-position: 0 -160px;
+       object-position: 0 -160px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__weddingPackage__box__img_image2 {
+    -o-object-position: 0 -150px;
+       object-position: 0 -150px;
+  }
+}
+@media (max-width: 360px) {
+  .costOfFilming__weddingPackage__box__img_image2 {
+    -o-object-position: 0 -90px;
+       object-position: 0 -90px;
+  }
+}
+.costOfFilming__weddingPackage__box__about {
+  width: 600px;
+}
+@media (max-width: 1080px) {
+  .costOfFilming__weddingPackage__box__about {
+    width: 700px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__about {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .costOfFilming__weddingPackage__box__about {
+    width: 350px;
+  }
+}
+@media (max-width: 360px) {
+  .costOfFilming__weddingPackage__box__about {
+    width: 300px;
+  }
+}
+.costOfFilming__weddingPackage__box__about__title {
+  font-family: "FontAboutHome";
+  font-weight: 600;
+  font-size: 40px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__about__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__about__title {
+    font-size: 24px;
+  }
+}
+.costOfFilming__weddingPackage__box__about__name {
+  font-family: "FontAboutHome";
+  font-size: 30px;
+  font-weight: 600;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__about__name {
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__about__name {
+    font-size: 22px;
+  }
+}
+.costOfFilming__weddingPackage__box__about__cost {
+  font-family: "FontAboutHome";
+  font-size: 28px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__about__cost {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__about__cost {
+    font-size: 20px;
+  }
+}
+.costOfFilming__weddingPackage__box__about__text {
+  font-family: "FontAboutHome";
+  font-size: 24px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__about__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .costOfFilming__weddingPackage__box__about__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1080px) {
+  .costOfFilming__weddingPackage__box__about__text:last-child {
+    border-bottom: 2px solid rgba(66, 64, 64, 0.2);
+  }
+}
+.costOfFilming__weddingPackage__box__about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.costOfFilming__weddingPackage__box__about__list__point {
+  font-family: "FontAboutHome";
+  font-size: 18px;
+}
+@media (max-width: 1500px) {
+  .costOfFilming__weddingPackage__box__about__list__point {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=CostOfFilming.css.map */

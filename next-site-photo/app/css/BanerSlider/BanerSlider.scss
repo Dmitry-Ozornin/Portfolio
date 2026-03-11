@@ -1,0 +1,32 @@
+.imageBox {
+  position: relative;
+  width: 100vw;
+  &__image {
+    position: relative !important;
+    object-fit: cover !important;
+    width: 100vw !important;
+    height: 1300px !important;
+
+    @media (max-width: 2100px) {
+      height: 1090px !important;
+    }
+    @media (max-width: 1500px) {
+      height: 700px !important;
+    }
+    @media (max-width: 1050px) {
+      height: 600px !important;
+    }
+    @media (max-width: 800px) {
+      height: 500px !important;
+    }
+    @media (max-width: 500px) {
+      height: 250px !important;
+    }
+    @media (max-width: 400px) {
+      height: 220px !important;
+    }
+    @media (max-width: 400px) {
+      height: 200px !important;
+    }
+  }
+}

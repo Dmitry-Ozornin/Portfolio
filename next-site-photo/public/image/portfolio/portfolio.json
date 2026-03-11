@@ -6,7 +6,7 @@
     "aboutAlbum": "Здесь собраны лучшие кадры семейный и дружеских",
     "items": [
       {
-        "name": "Eva,Elisey_and_Victoria",
+        "name": "Eva_Elisey_and_Victoria",
         "title": "Ева ,Елисей и Виктория",
         "cover": "/image/portfolio/family_and_group_photo_shoot/Eva,Elisha_and_Victoria/0195a8346ff9d1d9baea8467544f632b.jpg",
         "photos": [
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "name": "Katya,Kirill,Tema_and_Anya",
+        "name": "Katya_Kirill_Tema_and_Anya",
         "title": "Екатерина, Кирилл, Тема и Анна",
         "cover": "/image/portfolio/family_and_group_photo_shoot/Katya_Kirill_Tema_and_Anya/00c6f82fe0b9877aa24da7bfecfe4498.jpg",
         "photos": [
@@ -329,7 +329,7 @@
     "aboutAlbum": "Здесь собраны лучшие кадры со свадеб.",
     "items": [
       {
-        "name": "Alla_and_Alexey,wedding_anniversary",
+        "name": "Alla_and_Alexey_wedding_anniversary",
         "title": "Алла и Алексей, годовщина свадьбы",
         "cover": "/image/portfolio/wedding_photography/Alla_and_Alexey,wedding_anniversary/82fac18ef4280863397d05b314606ead.jpg",
         "photos": [

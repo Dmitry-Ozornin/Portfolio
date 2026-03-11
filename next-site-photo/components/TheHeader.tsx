@@ -1,5 +1,6 @@
 import { Navigation } from "./Navigation";
 import "../app/css/TheHeader/theHeader.css";
+import { DropDownNavigation } from "./DropDownNavigation";
 
 const navItems = [
   { label: "Home", href: "/", title: "Главная" },
@@ -10,9 +11,10 @@ const navItems = [
 
 const TheHeader = () => {
   return (
-    <header className="theHeader">
+    <>
       <Navigation navLinks={navItems} />
-    </header>
+      <DropDownNavigation navLinks={navItems} />
+    </>
   );
 };
 export { TheHeader };

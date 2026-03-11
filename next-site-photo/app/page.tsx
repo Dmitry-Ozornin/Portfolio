@@ -1,8 +1,9 @@
-
 import { Metadata } from "next";
-import BootstrapCarousel from "@/components/BanerSlider";
+
 import PhotoCarousel from "@/components/PhotoCarousel";
 import AboutHome from "@/components/AboutHome";
+import FAQHome from "@/components/FAQHome";
+import BannerSlider from "@/components/BanerSlider";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -11,9 +12,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <BootstrapCarousel />
+      <BannerSlider />
       <PhotoCarousel />
-      <AboutHome/>
+      <AboutHome />
+      <FAQHome />
     </>
   );
 }

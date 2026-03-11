@@ -1,0 +1,86 @@
+.Photosession {
+  min-height: 78vh;
+}
+.Photosession__title {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 38px;
+}
+@media (max-width: 1080px) {
+  .Photosession__title {
+    padding-top: 3vh;
+  }
+}
+@media (max-width: 500px) {
+  .Photosession__title {
+    width: 400px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 425px) {
+  .Photosession__title {
+    width: 340px;
+  }
+}
+@media (max-width: 380px) {
+  .Photosession__title {
+    width: 315px;
+    font-size: 23px;
+    padding-top: 2vh;
+  }
+}
+@media (max-width: 330px) {
+  .Photosession__title {
+    width: 250px;
+    font-size: 20px;
+    padding-top: 2vh;
+  }
+}
+.Photosession_Imgview {
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo-item-wrapper {
+  z-index: 20;
+}
+@media (max-width: 1500px) {
+  .photo-item-wrapper {
+    height: 600px !important;
+  }
+}
+@media (max-width: 1080px) {
+  .photo-item-wrapper {
+    height: 500px !important;
+  }
+}
+@media (max-width: 800px) {
+  .photo-item-wrapper {
+    height: 400px !important;
+  }
+}
+@media (max-width: 400px) {
+  .photo-item-wrapper {
+    height: 350px !important;
+  }
+}
+@media (max-width: 330px) {
+  .photo-item-wrapper {
+    height: 450px !important;
+  }
+}
+
+.NotFind {
+  padding-top: 40vh;
+  height: 79vh;
+  text-align: center;
+  font-family: "FontAboutHome", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.NotFind__link {
+  font-size: 2rem;
+}/*# sourceMappingURL=showPhotosession.css.map */

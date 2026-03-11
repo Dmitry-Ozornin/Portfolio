@@ -1,0 +1,37 @@
+.PhotoCarousel {
+  margin-top: 30px;
+  height: 1000px;
+  position: relative;
+}
+@media (max-width: 2100px) {
+  .PhotoCarousel {
+    height: 700px !important;
+  }
+}
+@media (max-width: 1500px) {
+  .PhotoCarousel {
+    height: 550px !important;
+  }
+}
+@media (max-width: 1080px) {
+  .PhotoCarousel {
+    margin-top: 10px;
+    height: 420px !important;
+  }
+}
+@media (max-width: 800px) {
+  .PhotoCarousel {
+    height: 320px !important;
+  }
+}
+@media (max-width: 500px) {
+  .PhotoCarousel {
+    height: 180px !important;
+  }
+}
+@media (max-width: 400px) {
+  .PhotoCarousel {
+    margin-top: 10px;
+    height: 150px !important;
+  }
+}/*# sourceMappingURL=photoCarousel.css.map */

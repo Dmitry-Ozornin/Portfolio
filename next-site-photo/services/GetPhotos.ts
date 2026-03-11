@@ -52,3 +52,35 @@ export const getNeedAlbum = async (needAlbum: string): Promise<PhotoAlbum | null
     return null;
   }
 };
+
+//функция получения конкретного альбома
+export const getNeedPhotoSession = async (photoSession: string, album: string): Promise<PhotoAlbum | null> => {
+  try {
+    const response = await fetch("/image/portfolio/portfolio.json", {
+      next: { revalidate: 3600 },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch albums: ${response.status}`);
+    }
+    let needPhotosession;
+
+    const albums: PhotoAlbum[] = await response.json();
+
+    albums.map((albumItem) => {
+      if (albumItem.name === album) {
+        albumItem.items.map((item) => {
+          // console.log(item.name);
+          if (item.name === photoSession) {
+            console.log(item.name);
+            needPhotosession = item;
+          }
+        });
+      }
+    });
+    return needPhotosession || null;
+  } catch (error) {
+    console.error("Error loading albums:", error);
+    return null;
+  }
+};

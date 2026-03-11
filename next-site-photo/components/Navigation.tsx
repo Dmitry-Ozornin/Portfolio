@@ -15,7 +15,7 @@ type Props = {
 const Navigation = ({ navLinks }: Props) => {
   const pathName = usePathname();
   return (
-    <>
+    <header className="theHeader">
       {navLinks.map((link) => {
         const isActive = pathName === link.href;
 
@@ -25,7 +25,7 @@ const Navigation = ({ navLinks }: Props) => {
           </Link>
         );
       })}
-    </>
+    </header>
   );
 };
 

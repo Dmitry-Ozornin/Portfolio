@@ -21,7 +21,7 @@ const AlbumsShow = () => {
   return loading ? (
     <h3>Загрузка...</h3>
   ) : (
-    <section className="portfolio">
+    <section className="portfolio center">
       <h1 className="portfolio__title">Альбомы</h1>
       <section className="portfolio__albums">
         {albums.map((album, index) => {
@@ -34,7 +34,7 @@ const AlbumsShow = () => {
                 style={{
                   objectFit: "cover",
                   width: "100%",
-                  height: "auto",
+
                   opacity: 0,
                   transition: "opacity 0.5s ease-in, transform 0.3s ease",
                 }}

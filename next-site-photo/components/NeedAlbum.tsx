@@ -38,24 +38,18 @@ const ShowNeedAlbum = ({ name }: Props) => {
 
   // 1. Показываем загрузку если loading
   if (loading) {
-    return (
-      <section className="ShowPhotosession">
-        {/* <h1 style={{ marginTop: "10vh", textAlign: "center" }}>Загрузка...</h1> */}
-      </section>
-    );
+    return <section className="ShowPhotosession">{/* <h1 style={{ marginTop: "10vh", textAlign: "center" }}>Загрузка...</h1> */}</section>;
   }
 
   // 2. Если НЕ loading, но альбома нет И была попытка загрузки - показываем "не найден"
   if (!loading && hasLoadedRef.current && !currentAlbum) {
     return (
-      <section className="ShowPhotosession">
-        <div className="NotFind">
-          <h2 className="NotFind__title">Альбом не найден</h2>
-          <Link href="/gallery" className="NotFind__link">
-            ← Вернуться в галерею
-          </Link>
-        </div>
-      </section>
+      <div className="NotFind">
+        <h2 className="NotFind__title">Альбом не найден</h2>
+        <Link href="/gallery" className="NotFind__link">
+          ← Вернуться в галерею
+        </Link>
+      </div>
     );
   }
 
@@ -75,32 +69,35 @@ const ShowNeedAlbum = ({ name }: Props) => {
 
   return (
     <section className="ShowPhotosession">
-      <h1 className="ShowPhotosession__title center">{album.title}</h1>
+      <h1 className="ShowPhotosession__title">{album.title}</h1>
 
       <section className="ShowPhotosession__box">
         {album.items &&
           album.items.map((session: PhotoSession, index: number) => (
-            <Link key={session.name} href={`/gallery/${name}/${session.name}`} className="block">
-              <Image
-                width={400}
-                height={500}
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "auto",
-                  opacity: 0,
-                  transition: "opacity 0.7s ease, transform 0.3s ease",
-                }}
-                onLoad={(e) => {
-                  e.currentTarget.style.opacity = "1";
-                }}
-                loading={index > 3 ? "lazy" : "eager"}
-                priority={index < 3}
-                src={session.cover}
-                className="ShowPhotosession__box_image"
-                alt={session.title}
-              />
-              <h1 className="ShowPhotosession__box_title" style={{textDecoration: "none"}}>{session.title}</h1>
+            <Link key={session.name} href={`/gallery/${name}/${session.name}`} className="">
+              <div className="ShowPhotosession__box__imageBox">
+                <Image
+                  fill
+                  style={{
+                    objectFit: "cover",
+
+                    opacity: 0,
+                    transition: "opacity 0.7s ease, transform 0.3s ease",
+                  }}
+                  onLoad={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                  }}
+                  loading={index > 3 ? "lazy" : "eager"}
+                  priority={index < 3}
+                  src={session.cover}
+                  className="ShowPhotosession__box_image"
+                  alt={session.title}
+                />
+              </div>
+
+              <h1 className="ShowPhotosession__box_title" style={{ textDecoration: "none" }}>
+                {session.title}
+              </h1>
             </Link>
           ))}
       </section>

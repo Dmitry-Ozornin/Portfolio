@@ -1,0 +1,46 @@
+.imageBox {
+  position: relative;
+  width: 100vw;
+}
+.imageBox__image {
+  position: relative !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100vw !important;
+  height: 1300px !important;
+}
+@media (max-width: 2100px) {
+  .imageBox__image {
+    height: 1090px !important;
+  }
+}
+@media (max-width: 1500px) {
+  .imageBox__image {
+    height: 700px !important;
+  }
+}
+@media (max-width: 1050px) {
+  .imageBox__image {
+    height: 600px !important;
+  }
+}
+@media (max-width: 800px) {
+  .imageBox__image {
+    height: 500px !important;
+  }
+}
+@media (max-width: 500px) {
+  .imageBox__image {
+    height: 250px !important;
+  }
+}
+@media (max-width: 400px) {
+  .imageBox__image {
+    height: 220px !important;
+  }
+}
+@media (max-width: 400px) {
+  .imageBox__image {
+    height: 200px !important;
+  }
+}/*# sourceMappingURL=BanerSlider.css.map */

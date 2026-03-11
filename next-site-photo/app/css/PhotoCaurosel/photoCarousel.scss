@@ -1,0 +1,28 @@
+.PhotoCarousel {
+  margin-top: 30px;
+  height: 1000px;
+  position: relative;
+  @media (max-width: 2100px) {
+    height: 700px !important;
+  }
+
+  @media (max-width: 1500px) {
+    height: 550px !important;;
+  }
+
+  @media (max-width: 1080px) {
+    margin-top: 10px;
+    height: 420px !important;; 
+  }
+  @media (max-width: 800px) {
+    height: 320px !important;;
+  }
+  @media (max-width: 500px) {
+    height: 180px !important;;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 10px;
+    height: 150px !important;
+  }
+}

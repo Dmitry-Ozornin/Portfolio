@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "FontAboutHome";
+  src: url("/fonts/PlayfairDisplay-Italic.woff"), url("/fonts/PlayfairDisplay-Italic.woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+.costOfFilming {
+  position: relative;
+  &__standard {
+    padding-top: 90px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+      padding-top: 30px;
+    }
+    &__box {
+      position: relative;
+      display: flex;
+      max-width: 700px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &_img {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        @media (max-width: 500px) {
+          width: 400px;
+          height: 450px;
+        }
+        @media (max-width: 400px) {
+          width: 360px;
+          height: 400px;
+        }
+        @media (max-width: 330px) {
+          width: 300px;
+          height: 380px;
+        }
+      }
+
+      &__description {
+        position: relative;
+        @media (max-width: 500px) {
+          width: 400px;
+        }
+        @media (max-width: 400px) {
+          width: 300px;
+        }
+        @media (max-width: 330px) {
+          width: 280px;
+        }
+      }
+    }
+  }
+
+  &__certificate {
+    margin-top: 30px;
+    width: 1500px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    @media (max-width: 1500px) {
+      width: 1000px;
+    }
+    @media (max-width: 1080px) {
+      max-width: 800px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &_box {
+      max-width: 3000px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__title {
+      font-family: "FontAboutHome";
+      font-size: 40px;
+      @media (max-width: 1080px) {
+        text-align: center;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      // max-width: 1000px;
+      @media (max-width: 1080px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__weddingPackage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+
+    &__title {
+      text-align: center;
+      font-family: "FontAboutHome";
+      font-size: 46px;
+      font-weight: 600;
+      margin-bottom: 60px;
+      @media (max-width: 1500px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 500px) {
+        font-size: 24px;
+      }
+    }
+    &__box {
+      &_boxStyleTypeOne {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        @media (max-width: 1080px) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+      &_boxStyleTypeTwo {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        align-items: center;
+        @media (max-width: 1080px) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+
+      &__img {
+        position: relative;
+        width: 1000px;
+        height: 700px;
+
+        @media (max-width: 1500px) {
+          width: 700;
+          height: 600px;
+        }
+        @media (max-width: 1080px) {
+          width: 700px;
+          height: 600px;
+        }
+        @media (max-width: 500px) {
+          width: 400px;
+          height: 300px;
+        }
+        @media (max-width: 400px) {
+          width: 360px;
+          height: 300px;
+        }
+        @media (max-width: 360px) {
+          width: 300px;
+        }
+
+        &_image1 {
+          object-position: 0 -330px;
+          @media (max-width: 1500px) {
+            object-position: 0 -230px;
+          }
+          @media (max-width: 500px) {
+            object-position: 0 -130px;
+          }
+          @media (max-width: 400px) {
+            object-position: 0 -110px;
+          }
+          @media (max-width: 360px) {
+            object-position: 0 -90px;
+          }
+        }
+
+        &_image2 {
+          object-position: 0 -410px;
+
+          @media (max-width: 1500px) {
+            object-position: 0 -270px;
+          }
+          @media (max-width: 500px) {
+            object-position: 0 -160px;
+          }
+          @media (max-width: 400px) {
+            object-position: 0 -150px;
+          }
+          @media (max-width: 360px) {
+            object-position: 0 -90px;
+          }
+        }
+      }
+      &__about {
+        width: 600px;
+        @media (max-width: 1500px) {
+          // width: 550px;
+        }
+        @media (max-width: 1080px) {
+          width: 700px;
+        }
+        @media (max-width: 500px) {
+          width: 400px;
+        }
+        @media (max-width: 400px) {
+          width: 350px;
+        }
+        @media (max-width: 360px) {
+          width: 300px;
+        }
+
+        &__title {
+          font-family: "FontAboutHome";
+          font-weight: 600;
+          font-size: 40px;
+
+          @media (max-width: 1500px) {
+            font-size: 32px;
+          }
+          @media (max-width: 500px) {
+            font-size: 24px;
+          }
+        }
+        &__name {
+          font-family: "FontAboutHome";
+          font-size: 30px;
+          font-weight: 600;
+
+          @media (max-width: 1500px) {
+            font-size: 26px;
+          }
+          @media (max-width: 500px) {
+            font-size: 22px;
+          }
+        }
+        &__cost {
+          font-family: "FontAboutHome";
+          font-size: 28px;
+
+          @media (max-width: 1500px) {
+            font-size: 22px;
+          }
+          @media (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+        &__text {
+          font-family: "FontAboutHome";
+          font-size: 24px;
+
+          @media (max-width: 1500px) {
+            font-size: 18px;
+          }
+          @media (max-width: 500px) {
+            font-size: 16px;
+          }
+          @media (max-width: 1080px) {
+            &:last-child {
+              border-bottom: 2px solid rgb(66, 64, 64, 0.2);
+            }
+          }
+        }
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          &__point {
+            font-family: "FontAboutHome";
+            font-size: 18px;
+
+            @media (max-width: 1500px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

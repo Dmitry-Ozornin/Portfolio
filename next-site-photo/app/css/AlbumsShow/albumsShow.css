@@ -6,8 +6,33 @@
   font-display: swap;
 }
 .portfolio {
-  margin-top: 10vh;
   margin-bottom: 60px;
+  position: relative;
+  padding-top: 10vh;
+}
+@media (max-width: 1200px) {
+  .portfolio {
+    padding-top: 3vh;
+  }
+}
+@media (max-width: 992px) {
+  .portfolio {
+    padding-top: 5vh;
+  }
+}
+@media (max-width: 769px) {
+  .portfolio {
+    min-width: 100%;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 3vh;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio {
+    max-width: 100%;
+    padding-top: 2vh;
+  }
 }
 .portfolio__title {
   font-family: "FontAboutHome", sans-serif;
@@ -29,6 +54,7 @@
   }
 }
 .portfolio__albums {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -81,16 +107,15 @@
 }
 .portfolio__albums__image {
   width: 500px;
-  height: 700px;
+  height: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 9px 8px rgba(3, 13, 21, 0.3);
   /* Адаптивность для изображения */
-  /* Для очень маленьких экранов */
 }
 @media (max-width: 1200px) {
   .portfolio__albums__image {
-    width: 450px;
-    height: 630px;
+    width: 400px;
+    height: 600px;
   }
 }
 @media (max-width: 992px) {
@@ -113,6 +138,9 @@
     width: 100%;
     box-shadow: 0px 0px 6px 4px rgba(3, 13, 21, 0.3);
   }
+}
+.portfolio__albums__image {
+  /* Для очень маленьких экранов */
 }
 @media (max-width: 360px) {
   .portfolio__albums__image {
@@ -178,42 +206,5 @@
     font-size: 13px;
     line-height: 1.4;
     padding: 0 10px;
-  }
-}
-
-/* Дополнительные адаптивные классы для разных размеров */
-@media (max-width: 768px) {
-  .portfolio {
-    padding: 0 15px;
-  }
-  .portfolio__albums__map {
-    /* На мобильных делаем карточки более компактными */
-    padding: 0 10px;
-  }
-}
-@media (max-width: 480px) {
-  .portfolio {
-    padding: 0 10px;
-  }
-  .portfolio__title {
-    padding: 0 10px;
-  }
-  .portfolio__albums__map {
-    padding: 0 5px;
-  }
-}
-/* Для очень маленьких экранов (меньше 320px) */
-@media (max-width: 320px) {
-  .portfolio__title {
-    font-size: 24px;
-  }
-  .portfolio__albums {
-    gap: 15px;
-  }
-  .portfolio__albums__title {
-    font-size: 16px;
-  }
-  .portfolio__albums__about {
-    font-size: 12px;
   }
 }/*# sourceMappingURL=albumsShow.css.map */
