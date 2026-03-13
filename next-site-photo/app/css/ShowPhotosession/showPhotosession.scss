@@ -44,8 +44,8 @@
   @media (max-width: 800px) {
     height: 400px !important;
   }
-  @media (max-width: 400px) {
-    height: 350px !important;
+  @media (max-width: 480px) {
+    height: 550px !important;
   }
   @media (max-width: 330px) {
     height: 450px !important;
@@ -63,5 +63,13 @@
 
   &__link {
     font-size: 2rem;
+  }
+}
+
+@media (width <= 480px) {
+  .photos-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 10px;
+    padding: 12px;
   }
 }

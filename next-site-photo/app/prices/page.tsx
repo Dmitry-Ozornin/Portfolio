@@ -2,8 +2,8 @@ import { AboutPrice } from "@/components/AboutPrice";
 import { ApplicationForm } from "@/components/AplicationForm";
 import BannerSlider from "@/components/BanerSlider";
 import { CostOfFilming } from "@/components/CostOfFilming";
+import ToMenu from "@/components/ToMenu";
 import { Metadata } from "next";
-
 
 export const metadata: Metadata = {
   title: "Home",
@@ -15,7 +15,8 @@ export default function Prices() {
       <BannerSlider />
       <AboutPrice />
       <CostOfFilming />
-      <ApplicationForm/>
+      <ApplicationForm />
+      <ToMenu />
     </>
   );
 }

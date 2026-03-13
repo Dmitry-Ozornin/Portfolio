@@ -1,6 +1,7 @@
 .imageBox {
   position: relative;
   width: 100vw;
+  z-index: 30;
   &__image {
     position: relative !important;
     object-fit: cover !important;

@@ -42,6 +42,9 @@ export const usePhotosStore = create<UsePhotos>((set) => ({
     try {
       const result = await getNeedPhotoSession(session, album);
       set({ photoSession: result, loading: false });
-    } catch (error) {}
+    } catch (error) {
+      console.error("Ошибка загрузки фотосессии:", error);
+      set({ photoSession: null, loading: false });
+    }
   },
 }));

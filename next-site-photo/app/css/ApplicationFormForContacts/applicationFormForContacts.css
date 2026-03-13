@@ -5,6 +5,7 @@
   align-items: center;
   background-color: rgb(233, 232, 235);
   width: 100%;
+  z-index: 30;
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 20px;
@@ -15,6 +16,7 @@
   background-color: rgb(233, 232, 235);
   border: none;
   border-bottom: 2px solid grey;
+  color: black;
   padding-top: 10px;
   padding-bottom: 10px;
   outline: none;
@@ -39,6 +41,7 @@
   resize: none;
   padding: 5px;
   outline: none;
+  color: black;
 }
 @media (max-width: 650px) {
   .ApplicationFormForContacts__message {

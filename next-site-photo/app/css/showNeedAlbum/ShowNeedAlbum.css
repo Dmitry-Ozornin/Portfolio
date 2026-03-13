@@ -79,10 +79,16 @@
   width: 600px;
   height: 800px;
 }
+@media (max-width: 2100px) {
+  .ShowPhotosession__box__imageBox {
+    height: 600px;
+    width: 400px;
+  }
+}
 @media (max-width: 1500px) {
   .ShowPhotosession__box__imageBox {
-    height: 700px;
-    width: 500px;
+    height: 600px;
+    width: 400px;
   }
 }
 @media (max-width: 550px) {
@@ -110,13 +116,13 @@
 .ShowPhotosession__box_title {
   font-family: "FontAboutHome", sans-serif;
   padding-top: 5px;
-  width: 600px;
+  width: 400px;
   text-align: center;
   color: black;
 }
 @media (max-width: 1500px) {
   .ShowPhotosession__box_title {
-    width: 500px;
+    width: 400px;
   }
 }
 @media (max-width: 500px) {
@@ -146,4 +152,12 @@
 }
 .NotFind__link {
   font-size: 2rem;
+}
+
+@media (width <= 480px) {
+  .photos-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 10px;
+    padding: 12px;
+  }
 }/*# sourceMappingURL=ShowNeedAlbum.css.map */

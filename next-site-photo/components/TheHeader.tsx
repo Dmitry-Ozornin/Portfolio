@@ -11,10 +11,10 @@ const navItems = [
 
 const TheHeader = () => {
   return (
-    <>
+    <section id="menu">
       <Navigation navLinks={navItems} />
       <DropDownNavigation navLinks={navItems} />
-    </>
+    </section>
   );
 };
 export { TheHeader };

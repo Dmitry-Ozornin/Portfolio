@@ -4,6 +4,7 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 import AboutHome from "@/components/AboutHome";
 import FAQHome from "@/components/FAQHome";
 import BannerSlider from "@/components/BanerSlider";
+import ToMenu from "@/components/ToMenu";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -16,6 +17,7 @@ export default function Home() {
       <PhotoCarousel />
       <AboutHome />
       <FAQHome />
+      <ToMenu />
     </>
   );
 }

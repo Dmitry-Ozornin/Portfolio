@@ -1,6 +1,6 @@
 .PhotoCarousel {
   margin-top: 30px;
-  height: 1000px;
+  height: 900px;
   position: relative;
 }
 @media (max-width: 2100px) {
@@ -10,13 +10,13 @@
 }
 @media (max-width: 1500px) {
   .PhotoCarousel {
-    height: 550px !important;
+    height: 500px !important;
   }
 }
 @media (max-width: 1080px) {
   .PhotoCarousel {
     margin-top: 10px;
-    height: 420px !important;
+    height: 350px !important;
   }
 }
 @media (max-width: 800px) {
@@ -32,6 +32,6 @@
 @media (max-width: 400px) {
   .PhotoCarousel {
     margin-top: 10px;
-    height: 150px !important;
+    height: 160px !important;
   }
 }/*# sourceMappingURL=photoCarousel.css.map */

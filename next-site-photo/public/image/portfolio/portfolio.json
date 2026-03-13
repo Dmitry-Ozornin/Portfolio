@@ -8,7 +8,7 @@
       {
         "name": "Eva_Elisey_and_Victoria",
         "title": "Ева ,Елисей и Виктория",
-        "cover": "/image/portfolio/family_and_group_photo_shoot/Eva,Elisha_and_Victoria/0195a8346ff9d1d9baea8467544f632b.jpg",
+        "cover": "/image/portfolio/family_and_group_photo_shoot/Eva,Elisha_and_Victoria/coverEva_Elisha_Victoria.jpg",
         "photos": [
           "/image/portfolio/family_and_group_photo_shoot/Eva,Elisha_and_Victoria/0195a8346ff9d1d9baea8467544f632b.jpg",
           "/image/portfolio/family_and_group_photo_shoot/Eva,Elisha_and_Victoria/04816f77e406b4dc91b1be843b4241af.jpg",
@@ -28,7 +28,7 @@
       {
         "name": "For_Lera's_birthday",
         "title": "К Дню Рождению Леры",
-        "cover": "/image/portfolio/family_and_group_photo_shoot/For_Lera's_birthday/01f4edd41abe9d5306a09d787eb6892c.jpg",
+        "cover": "/image/portfolio/family_and_group_photo_shoot/For_Lera's_birthday/coverLeraBirthday.jpg",
         "photos": [
           "/image/portfolio/family_and_group_photo_shoot/For_Lera's_birthday/01f4edd41abe9d5306a09d787eb6892c.jpg",
           "/image/portfolio/family_and_group_photo_shoot/For_Lera's_birthday/08769d3d191714144e077c2a8fd38c4c.jpg",
@@ -46,7 +46,7 @@
       {
         "name": "Katya_Kirill_Tema_and_Anya",
         "title": "Екатерина, Кирилл, Тема и Анна",
-        "cover": "/image/portfolio/family_and_group_photo_shoot/Katya_Kirill_Tema_and_Anya/00c6f82fe0b9877aa24da7bfecfe4498.jpg",
+        "cover": "/image/portfolio/family_and_group_photo_shoot/Katya_Kirill_Tema_and_Anya/coverKate_Anna_Kirill_Tema.jpg",
         "photos": [
           "/image/portfolio/family_and_group_photo_shoot/Katya_Kirill_Tema_and_Anya/00c6f82fe0b9877aa24da7bfecfe4498.jpg",
           "/image/portfolio/family_and_group_photo_shoot/Katya_Kirill_Tema_and_Anya/4c80e8ba47f08d63ab8fca3114af2d1a.jpg",
@@ -66,7 +66,7 @@
       {
         "name": "Yana_and_Dasha",
         "title": "Яна и Даша",
-        "cover": "/image/portfolio/family_and_group_photo_shoot/Yana_and_Dasha/66eb029180409561c63ecb2b7a9319d7.jpg",
+        "cover": "/image/portfolio/family_and_group_photo_shoot/Yana_and_Dasha/coverYana_Daria.jpg",
         "photos": [
           "/image/portfolio/family_and_group_photo_shoot/Yana_and_Dasha/66eb029180409561c63ecb2b7a9319d7.jpg",
           "/image/portfolio/family_and_group_photo_shoot/Yana_and_Dasha/69163edb64603a63fc4e33ee17cd94dc.jpg",
@@ -87,7 +87,7 @@
       {
         "name": "Darina",
         "title": "Дарина",
-        "cover": "/image/portfolio/individual_photo_session/Darina/0f6c3e908942d634255396edb35824cc.jpg",
+        "cover": "/image/portfolio/individual_photo_session/Darina/coverDarina.jpg",
         "photos": [
           "/image/portfolio/individual_photo_session/Darina/0f6c3e908942d634255396edb35824cc.jpg",
           "/image/portfolio/individual_photo_session/Darina/161632b159787bbe9f3c1db40b7cb6ec.jpg",
@@ -103,7 +103,7 @@
       {
         "name": "Diana",
         "title": "Диана",
-        "cover": "/image/portfolio/individual_photo_session/Diana/4X2A0110.jpg",
+        "cover": "/image/portfolio/individual_photo_session/Diana/coverDiana.jpg",
         "photos": [
           "/image/portfolio/individual_photo_session/Diana/4X2A0110-1.jpg",
           "/image/portfolio/individual_photo_session/Diana/4X2A0110.jpg",
@@ -150,7 +150,7 @@
       {
         "name": "Zlata",
         "title": "Злата",
-        "cover": "/image/portfolio/individual_photo_session/Zlata/0d1929357bc62e1ace4361e1ab9b3024.jpg",
+        "cover": "/image/portfolio/individual_photo_session/Zlata/coverZlata.jpg",
         "photos": [
           "/image/portfolio/individual_photo_session/Zlata/0d1929357bc62e1ace4361e1ab9b3024.jpg",
           "/image/portfolio/individual_photo_session/Zlata/13f8d2d325f19ed2badc8ae12643f3fb.jpg",
@@ -164,7 +164,7 @@
       {
         "name": "Maria",
         "title": "Мария",
-        "cover": "/image/portfolio/individual_photo_session/Maria/IMG_2886.jpg",
+        "cover": "/image/portfolio/individual_photo_session/Maria/coverMaria.jpg",
         "photos": [
           "/image/portfolio/individual_photo_session/Maria/IMG_2886.jpg",
           "/image/portfolio/individual_photo_session/Maria/IMG_2891.jpg",
@@ -177,7 +177,7 @@
       {
         "name": "Peter_Gumennik",
         "title": "Петр Гуменник",
-        "cover": "/image/portfolio/individual_photo_session/Peter_Gumennik/06691c66f3fdb535b6558f7f1f855f7d.jpg",
+        "cover": "/image/portfolio/individual_photo_session/Peter_Gumennik/coverPetrGymenik.jpg",
         "photos": [
           "/image/portfolio/individual_photo_session/Peter_Gumennik/06691c66f3fdb535b6558f7f1f855f7d.jpg",
           "/image/portfolio/individual_photo_session/Peter_Gumennik/3a27537326da707fac55236fb35beb48.jpg",
@@ -195,13 +195,13 @@
   {
     "name": "Love_Story",
     "title": "Love story",
-    "cover": "/image/portfolio/love_story/Anastasia_and_Dmitry/2c17ad8f780e62be24d40b05306db31f.jpg",
+    "cover": "/image/portfolio/love_story/coverLoveStory.jpeg",
     "aboutAlbum": "Здесь ваша любовь! Парные фотосессии.",
     "items": [
       {
         "name": "Anastasia_and_Dmitri",
         "title": "Анастасия и Дмитрий",
-        "cover": "/image/portfolio/love_story/Anastasia_and_Dmitry/2c17ad8f780e62be24d40b05306db31f.jpg",
+        "cover": "/image/portfolio/love_story/Anastasia_and_Dmitry/coverNasty_Dmitry.jpeg",
         "photos": [
           "/image/portfolio/love_story/Anastasia_and_Dmitry/2c17ad8f780e62be24d40b05306db31f.jpg",
           "/image/portfolio/love_story/Anastasia_and_Dmitry/5d832f7db086c0c10813a0be3ec390bc.jpg",
@@ -213,7 +213,7 @@
       {
         "name": "Anna_and_Eugene",
         "title": "Анна и Евгений",
-        "cover": "/image/portfolio/love_story/Anna_and_Eugene/0014b2cd88082046b30518a864062a52.jpg",
+        "cover": "/image/portfolio/love_story/Anna_and_Eugene/coverAnna_Eugene.jpg",
         "photos": [
           "/image/portfolio/love_story/Anna_and_Eugene/0014b2cd88082046b30518a864062a52.jpg",
           "/image/portfolio/love_story/Anna_and_Eugene/10559235747ed18a13b6ff00b8f8b960.jpg",
@@ -227,7 +227,7 @@
       {
         "name": "Yana_and_Leonid",
         "title": "Яна и Леонид",
-        "cover": "/image/portfolio/love_story/Yana_and_Leonid/cf865384d78dfe27982ed0a03033d006.jpg",
+        "cover": "/image/portfolio/love_story/Yana_and_Leonid/coverYana_Leonid.jpg",
         "photos": [
           "/image/portfolio/love_story/Yana_and_Leonid/2cbd4d72aaef4e7686b6453e8e6bb149.jpg",
           "/image/portfolio/love_story/Yana_and_Leonid/5e69a31baa8fecf9fef67669c5f8092f.jpg",
@@ -267,7 +267,7 @@
       {
         "name": "Irina_and_Dmitry",
         "title": "Ирина и Дмитрий",
-        "cover": "/image/portfolio/love_story/Irina_and_Dmitry/2b36cab24009a74bcd7a0b3f169b3a41.jpg",
+        "cover": "/image/portfolio/love_story/Irina_and_Dmitry/coverIrina_Dmitry.jpg",
         "photos": [
           "/image/portfolio/love_story/Irina_and_Dmitry/2b36cab24009a74bcd7a0b3f169b3a41.jpg",
           "/image/portfolio/love_story/Irina_and_Dmitry/4f1609e5828be3692d4aac74a3a97910.jpg",
@@ -282,14 +282,15 @@
       {
         "name": "Valeria_and_Alexey",
         "title": "Валерия и Алексей",
-        "cover": "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7848.jpg",
+        "cover": "/image/portfolio/love_story/Valeria_and_Alexey/covervalery_Aleks.jpg",
         "photos": [
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7848.jpg",
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7906.jpg",
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7914.jpg",
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7954.jpg",
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_7965-1.jpg",
-          "/image/portfolio/love_story/Valeria_and_Alexey/IMG_8008-1.jpg"
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A0344-1.jpg",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A0669.png",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A1087-1.jpg",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A1146.jpg",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A1191.jpg",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A1370.jpg",
+          "/image/portfolio/love_story/Valeria_and_Alexey/4X2A1442.jpg"
         ]
       }
     ]
@@ -297,13 +298,13 @@
   {
     "name": "Reportage_shooting",
     "title": "Репортажная съемка",
-    "cover": "/image/portfolio/Reportage_shooting/Graduation_Bachelor's_degree_Mining_University_2025/03a1b3e64942599267633b0aed66728c.jpg",
+    "cover": "/image/portfolio/Reportage_shooting/coverReportage.jpg",
     "aboutAlbum": "Здесь собраны лучшие кадры с мероприятий",
     "items": [
       {
         "name": "Graduation_Bachelor's_degree_Mining_University_2025",
         "title": "Выпуск, бакалавриат, Горный университет 2025",
-        "cover": "/image/portfolio/Reportage_shooting/Graduation_Bachelor's_degree_Mining_University_2025/03a1b3e64942599267633b0aed66728c.jpg",
+        "cover": "/image/portfolio/Reportage_shooting/Graduation_Bachelor's_degree_Mining_University_2025/coverReportage.jpg",
         "photos": [
           "/image/portfolio/Reportage_shooting/Graduation_Bachelor's_degree_Mining_University_2025/03a1b3e64942599267633b0aed66728c.jpg",
           "/image/portfolio/Reportage_shooting/Graduation_Bachelor's_degree_Mining_University_2025/5a174d1e0cadb5c7d0d9107ba2c8df86.jpg",
@@ -325,7 +326,7 @@
   {
     "name": "wedding_photography",
     "title": "Свадебная фотосъемка",
-    "cover": "/image/portfolio/wedding_photography/Alla_and_Alexey,wedding_anniversary/82fac18ef4280863397d05b314606ead.jpg",
+    "cover": "/image/portfolio/wedding_photography/coverWending.jpg",
     "aboutAlbum": "Здесь собраны лучшие кадры со свадеб.",
     "items": [
       {

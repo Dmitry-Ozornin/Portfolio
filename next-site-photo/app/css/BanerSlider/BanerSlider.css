@@ -1,6 +1,7 @@
 .imageBox {
   position: relative;
   width: 100vw;
+  z-index: 30;
 }
 .imageBox__image {
   position: relative !important;

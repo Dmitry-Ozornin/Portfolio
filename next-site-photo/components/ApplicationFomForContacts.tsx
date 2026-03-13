@@ -10,6 +10,7 @@ const ApplicationFomForContacts = () => {
   const [errorName, setErrorName] = useState("none");
   const [errorPhoneOrEmail, setErrorPhoneOrEmail] = useState("none");
   const [ErrorSend, setErrorSend] = useState("none");
+  const [sendMailTrue, setSendMailTrue] = useState("none");
 
   const FormHandler = async (e: any) => {
     e.preventDefault();
@@ -26,6 +27,7 @@ const ApplicationFomForContacts = () => {
         setInputName("");
         setInputPhoneOrEmail("");
         setMessage("");
+        setSendMailTrue("");
       } else {
         setErrorSend("");
       }
@@ -35,6 +37,7 @@ const ApplicationFomForContacts = () => {
   return (
     <form action="submit" className="ApplicationFormForContacts" onSubmit={FormHandler}>
       <h2>Заявка на фотосессию</h2>
+      <p style={{ display: sendMailTrue, color: "black", paddingLeft: "40px", paddingRight: "40px" }}>В ближайшее время я с вами свяжусь. Если заявка оставлена после 19:00, я с вами свяжусь завтра после 10:00</p>
       <ul className="ApplicationFormForContacts__error">
         <li style={{ display: errorName }}>Введите Имя.</li>
         <li style={{ display: errorPhoneOrEmail }}>Введите номер телефона или email.</li>

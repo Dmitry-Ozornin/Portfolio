@@ -1,7 +1,7 @@
 "use client";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import "bootstrap/dist/css/bootstrap.css";
 
 type NavLink = {
@@ -14,7 +14,7 @@ type Props = {
 };
 
 const DropDownNavigation = ({ navLinks }: Props) => {
-  const pathName = usePathname();
+  // const pathName = usePathname();
   return (
     <nav className="theHeaderDropdown ">
       <Nav variant="pills" activeKey="1">
@@ -28,7 +28,7 @@ const DropDownNavigation = ({ navLinks }: Props) => {
           className="theHeaderDropdown_no-caret "
         >
           {navLinks.map((link) => {
-            const isActive = pathName === link.href;
+            // const isActive = pathName === link.href;
 
             return (
               <Nav.Item key={link.label} className="theHeaderDropdown__box">

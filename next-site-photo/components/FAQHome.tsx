@@ -25,7 +25,7 @@ export default function FQAHome() {
           <Accordion.Header className="faq-header">Как забронировать дату и время?</Accordion.Header>
           <Accordion.Body className="faq-body">
             Для того, чтобы забронировать дату фотосессии, свяжитесь со мной любым удобным для вас способом:{" "}
-            <Link href={"/contacts"} className="faq-body__link">
+            <Link href={"/contact"} className="faq-body__link">
               Контакты
             </Link>
           </Accordion.Body>
@@ -38,7 +38,7 @@ export default function FQAHome() {
 
         <Accordion.Item eventKey="2" className="faq-item">
           <Accordion.Header className="faq-header"> Вы обрабатываете фото?</Accordion.Header>
-          <Accordion.Body className="faq-body">я всегда выполняю ретушь и цветокоррекцию фотографий, чтобы подчеркнуть их красоту и атмосферу события.</Accordion.Body>
+          <Accordion.Body className="faq-body">Я всегда выполняю ретушь и цветокоррекцию фотографий, чтобы подчеркнуть их красоту и атмосферу события.</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3" className="faq-item">
           <Accordion.Header className="faq-header"> Как проходит процесс съемки?</Accordion.Header>
