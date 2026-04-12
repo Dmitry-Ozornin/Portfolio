@@ -29,11 +29,12 @@ export class AdminService {
         });
       }
       // 1. Хешируем пароль
-      // const hashedPassword = await bcrypt.hash(userData.password, 10);
+      const hashedPassword = await bcrypt.hash(userData.password, 10);
+
       let roleEnum: UserRole;
-      switch (userData.role) {
+      switch (userData.role.toUpperCase()) {
         case 'ADMIN':
-          roleEnum = userData.role as UserRole;
+          roleEnum = UserRole.ADMIN;
           break;
         case 'WORKER':
           roleEnum = UserRole.WORKER;
@@ -41,9 +42,7 @@ export class AdminService {
         case 'MANAGER':
           roleEnum = UserRole.MANAGER;
           break;
-        case 'USER':
-          roleEnum = UserRole.WORKER;
-          break;
+      
         default:
           roleEnum = UserRole.WORKER; // значение по умолчанию
       }
@@ -61,7 +60,7 @@ export class AdminService {
       const user = await this.prisma.prisma.user.create({
         data: {
           login: userData.login,
-          password: userData.password,
+          password: hashedPassword,
           role: roleEnum,
           gender: genderEnum,
           email: userData.email,

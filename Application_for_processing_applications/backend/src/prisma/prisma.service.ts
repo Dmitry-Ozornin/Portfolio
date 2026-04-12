@@ -14,7 +14,7 @@ const {
 } = require('c:/work/portfolio/Application_for_processing_applications/backend/prisma/generated/prisma');
 
 @Injectable()
-export class PrismaService {
+export class PrismaService  {
   public prisma: any;
   private readonly logger = new Logger(PrismaService.name);
 

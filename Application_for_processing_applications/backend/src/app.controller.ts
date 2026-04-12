@@ -1,18 +1,14 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Res } from '@nestjs/common'; // 👈 добавьте Res
 import { AppService } from './app.service';
-// import { LoginUserDTO } from './loginUser.dto';
+import { LoginUserDTO } from './login.user.dto';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  // @Get()
-  // getHello(): string {
-  //   return this.appService.getHello();
-  // }
-
-  // @Post('login')
-  // loginUser(@Body() user: LoginUserDTO) {
-  //   return this.appService.login(user);
-  // }
+  @Post('login')
+  loginUser(@Body() userData: LoginUserDTO, @Res() res: Response) {
+    return this.appService.login(userData, res);
+  }
 }
