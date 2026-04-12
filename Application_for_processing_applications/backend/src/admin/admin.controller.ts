@@ -12,4 +12,9 @@ export class AdminController {
 
     return this.adminService.createUser(user);
   }
+  @Post('updateUser')
+  updateUser(@Body() updatedData: Partial<CreateUserDTO>) {
+    return this.adminService.changeDataOfUser( updatedData);
+    // Логика обновления данных пользователя
+  }
 }

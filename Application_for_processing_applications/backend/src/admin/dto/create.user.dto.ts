@@ -1,13 +1,14 @@
-// create.user.dto.ts
+// USER
 import {
+  IsNotEmpty,
   IsString,
+  MinLength,
   IsEmail,
-  IsBoolean,
   IsDate,
   IsOptional,
-  Length,
   IsArray,
-  IsEnum,
+  IsNumber,
+  IsBoolean,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 
@@ -16,11 +17,60 @@ export enum UserRole {
   WORKER = 'WORKER',
   MANAGER = 'MANAGER',
 }
+export enum GenderEnum{
+  MALE = "мужской",
+  FEMALE = "женский",
+}
 
 export class CreateUserDTO {
-  @Length(2, 50)
+  id?: string;
   @IsString()
-  login!: string;
+  @IsNotEmpty()
+  @MinLength(3)
+  login: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(6)
+  password: string;
+  @IsEmail()
+  email: string;
+  @IsString()
+  phone: string;
+
+  @IsString()
+  @IsNotEmpty()
+  gender: string;
+
+  @IsString()
+  role: string;
+
+  @IsString()
+  @IsNotEmpty()
+  firstName: string;
+
+  @IsString()
+  @IsNotEmpty()
+  lastName: string;
+
+  @IsString()
+  @IsOptional()
+  patronymic?: string;
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  typeOfWork?: string[];
+  @IsString()
+  @IsNotEmpty()
+  city: string;
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  dateOfBirth: Date;
+  @IsBoolean()
+  @IsOptional()
+  isActive?: boolean;
 }
 // @Length(2, 50)
 // @IsString()
@@ -53,11 +103,7 @@ export class CreateUserDTO {
 // @Length(2, 50)
 // @IsString()
 // city!: string;
-// @Length(8, 50)
-// @IsString()
-// password!: UserRole;
-// @IsEnum(UserRole)
-// role!: UserRole;
+
 // @IsOptional()
 // @IsString()
 // workingPosition?: string;

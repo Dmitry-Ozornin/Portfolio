@@ -6,15 +6,16 @@ import {
   OnModuleDestroy,
   Logger,
 } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { Pool } from 'pg';
 
+const {
+  PrismaClient,
+} = require('c:/work/portfolio/Application_for_processing_applications/backend/prisma/generated/prisma');
+
 @Injectable()
-export class PrismaService
-  extends PrismaClient
-  implements OnModuleInit, OnModuleDestroy
-{
+export class PrismaService {
+  public prisma: any;
   private readonly logger = new Logger(PrismaService.name);
 
   constructor() {
@@ -31,22 +32,20 @@ export class PrismaService
 
     const adapter = new PrismaPg(pool);
 
-    super({
+    this.prisma = new PrismaClient({
       adapter,
       log:
         process.env.NODE_ENV === 'development'
           ? ['query', 'info', 'warn', 'error']
           : ['error'],
-      errorFormat: 'pretty',
     });
   }
 
   async onModuleInit() {
     try {
       this.logger.log('Connecting to Supabase...');
-      await this.$connect();
+      await this.prisma.$connect();
       this.logger.log('✅ Successfully connected to Supabase');
-     
     } catch (error) {
       this.logger.error('Failed to connect to database:', error);
       throw error;
@@ -54,7 +53,7 @@ export class PrismaService
   }
 
   async onModuleDestroy() {
-    await this.$disconnect();
+    await this.prisma.$disconnect();
     this.logger.log('Disconnected from Supabase');
   }
 }
