@@ -8,6 +8,7 @@ type User = {
   id: number;
   login: string;
   role: string;
+  firstName: string;
 };
 
 type AuthContextType = {
@@ -34,7 +35,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         // Если пользователь авторизован и пытается зайти на на страницу логина
         if (window.location.pathname === "/login") {
-          console.log("🔁 Редирект по роли:", data.role);
           switch (data.role) {
             case "ADMIN":
               router.push("/admin");

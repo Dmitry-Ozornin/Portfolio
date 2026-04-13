@@ -9,6 +9,7 @@ import { PrismaService } from './prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
+import { first } from 'rxjs';
 
 @Injectable()
 export class AppService {
@@ -49,6 +50,7 @@ export class AppService {
         id: user.id,
         login: user.login,
         role: user.role,
+        firstName: user.firstName,
       });
 
       res.cookie('token', token, {
@@ -65,6 +67,7 @@ export class AppService {
           id: user.id,
           login: user.login,
           role: user.role,
+          firstName: user.firstName,
         },
       };
     } catch (error) {

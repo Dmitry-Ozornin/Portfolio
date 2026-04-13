@@ -1,3 +1,4 @@
+import { first } from 'rxjs';
 import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 import { LoginUserDTO } from './login.user.dto';
@@ -27,6 +28,7 @@ export class AppController {
         id: payload.id,
         login: payload.login,
         role: payload.role,
+        firstName: payload.firstName,
       });
     } catch (error) {
       return res.status(401).json({ error: 'Неверный или истекший токен' });

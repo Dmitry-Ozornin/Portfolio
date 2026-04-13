@@ -19,7 +19,7 @@ export default function ProtectedRoute({ children, allowedRoles }: ProtectedRout
       return;
     }
 
-    // 👇 ТОЛЬКО ЭТО ДОБАВИТЬ
+  
     if (!isLoading && user && allowedRoles && !allowedRoles.includes(user.role)) {
       logout(); // удаляет токен и кидает на логин
     }
