@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/lib/axios";
+import { useAuth } from "@/contexts/AuthContext";
 import axios from "axios";
 import styles from "./login.module.css";
 
@@ -13,6 +14,7 @@ type FormData = {
 
 export default function Login() {
   const router = useRouter();
+  const { setUser } = useAuth();
   const [serverError, setServerError] = useState<string | null>(null);
 
   const {
@@ -25,13 +27,35 @@ export default function Login() {
     setServerError(null);
 
     try {
-      // ✅ Токен автоматически сохранится в httpOnly cookie
-      // ❌ Не ждем token в ответе
-      await api.post("/login", {
+      const response = await api.post("/login", {
         login: data.login,
         password: data.password,
       });
+
+      console.log("Успех:", response.data);
+
+      if (response.data.success) {
+        setUser(response.data.user);
+
+        // Редирект по роли
+        switch (response.data.user.role) {
+          case "ADMIN":
+            router.push("/admin");
+            break;
+          case "MANAGER":
+            router.push("/manager");
+            break;
+          case "WORKER":
+            router.push("/worker");
+            break;
+          default:
+            setServerError("Неизвестная роль пользователя");
+            break;
+        }
+      }
     } catch (error) {
+      console.error("Ошибка:", error);
+
       if (axios.isAxiosError(error)) {
         setServerError(error.response?.data?.message || "Ошибка входа");
       } else {

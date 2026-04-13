@@ -31,8 +31,6 @@ export class AppService {
         where: { login: userData.login },
       });
 
-      console.log(user);
-
       if (!user) {
         throw new UnauthorizedException('Неверный логин или пароль');
       }
@@ -45,19 +43,17 @@ export class AppService {
       if (!isValidPassword) {
         throw new UnauthorizedException('Неверный логин или пароль');
       }
+      console.log(isValidPassword);
 
-      // Генерируем JWT токен
       const token = this.jwtService.sign({
         id: user.id,
         login: user.login,
         role: user.role,
       });
 
-      // Устанавливаем httpOnly cookie
       res.cookie('token', token, {
-        httpOnly: true, // Защита от XSS — JavaScript не прочитает
-        secure: process.env.NODE_ENV === 'production', // только HTTPS в проде
-        sameSite: 'lax', // Защита от CSRF
+        httpOnly: true,
+        sameSite: 'lax',
         maxAge: 30 * 24 * 60 * 60 * 1000,
         path: '/',
       });
@@ -83,5 +79,9 @@ export class AppService {
         'Произошла ошибка. Сервер временно недоступен или ведутся технические работы',
       );
     }
+  }
+
+  verifyToken(token: string) {
+    return this.jwtService.verify(token);
   }
 }

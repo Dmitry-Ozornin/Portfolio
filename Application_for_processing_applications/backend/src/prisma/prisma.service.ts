@@ -21,9 +21,9 @@ export class PrismaService  {
   constructor() {
     // Настройка пула для Supabase (используем DIRECT_URL для прямой связи)
     const pool = new Pool({
-      connectionString: process.env.DIRECT_URL, // Изменено: используем DIRECT_URL
+      connectionString: process.env.DIRECT_URL, 
       ssl: {
-        rejectUnauthorized: false, // Важно для Supabase
+        rejectUnauthorized: false, 
       },
       max: 20,
       idleTimeoutMillis: 30000,
@@ -45,7 +45,7 @@ export class PrismaService  {
     try {
       this.logger.log('Connecting to Supabase...');
       await this.prisma.$connect();
-      this.logger.log('✅ Successfully connected to Supabase');
+      this.logger.log('Successfully connected to Supabase');
     } catch (error) {
       this.logger.error('Failed to connect to database:', error);
       throw error;
