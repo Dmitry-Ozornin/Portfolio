@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 
+const BACKEND_URL = process.env.BACKEND_URL;
 const nextConfig: NextConfig = {
   reactCompiler: true,
 
@@ -12,7 +13,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "http://localhost:5500/:path*", // ваш бэкенд
+        destination: `${BACKEND_URL}/:path*`, // ваш бэкенд
       },
     ];
   },

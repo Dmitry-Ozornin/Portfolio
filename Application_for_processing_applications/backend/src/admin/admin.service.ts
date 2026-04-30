@@ -3,29 +3,57 @@ import {
   ConflictException,
   BadRequestException,
   InternalServerErrorException,
+  UnauthorizedException,
+  ForbiddenException,
 } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateUserDTO, GenderEnum } from './dto/create.user.dto';
 import { PrismaClientKnownRequestError } from '@prisma/client-runtime-utils';
 import { UserRole } from './dto/create.user.dto';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AdminService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly jwtService: JwtService,
+  ) {}
 
   async createUser(userData: CreateUserDTO) {
     try {
-      const existingUser = await this.prisma.prisma.user.findUnique({
+      const existingLogin = await this.prisma.prisma.user.findUnique({
         where: { login: userData.login },
       });
+      const existingEmail = await this.prisma.prisma.user.findUnique({
+        where: { email: userData.email },
+      });
+      const existingPhone = await this.prisma.prisma.user.findUnique({
+        where: { phone: userData.phone },
+      });
 
-      if (existingUser) {
+      if (existingLogin) {
         throw new ConflictException({
           statusCode: 409,
           message: `Пользователь с логином "${userData.login}" уже существует`,
           error: 'Conflict',
           field: 'login',
+        });
+      }
+      if (existingEmail) {
+        throw new ConflictException({
+          statusCode: 409,
+          message: `Пользователь с логином "${userData.email}" уже существует`,
+          error: 'Conflict',
+          field: 'email',
+        });
+      }
+      if (existingPhone) {
+        throw new ConflictException({
+          statusCode: 409,
+          message: `Пользователь с логином "${userData.phone}" уже существует`,
+          error: 'Conflict',
+          field: 'phone',
         });
       }
       // 1. Хешируем пароль
@@ -42,17 +70,17 @@ export class AdminService {
         case 'MANAGER':
           roleEnum = UserRole.MANAGER;
           break;
-      
+
         default:
           roleEnum = UserRole.WORKER; // значение по умолчанию
       }
 
       let genderEnum: GenderEnum;
       switch (userData.gender) {
-        case 'мужской':
+        case 'Мужской':
           genderEnum = GenderEnum.MALE;
           break;
-        case 'женский':
+        case 'Женский':
           genderEnum = GenderEnum.FEMALE;
           break;
       }
@@ -76,8 +104,6 @@ export class AdminService {
 
       return {
         success: true,
-        // message: `Пользователь ${userData.firstName} ${userData.secondName} успешно создан`,
-        userId: user.id,
       };
     } catch (error) {
       if (error instanceof ConflictException) {
@@ -85,16 +111,17 @@ export class AdminService {
       }
       // 3. Обрабатываем разные типы ошибок
       if (error instanceof PrismaClientKnownRequestError) {
-        // Код P2002 - нарушение уникальности
         if (error.code === 'P2002') {
-          // Получаем имя поля, которое вызвало конфликт
           const target = error.meta?.target as string[];
           const field = target ? target[0] : 'поле';
 
-          // Формируем понятное сообщение
           let userMessage = '';
           if (field === 'login') {
-            userMessage = `Пользователь с логином "${userData.login}" уже существует`;
+            userMessage = `Пользователь с логином уже существует`;
+          } else if (field === 'email') {
+            userMessage = `Пользователь с таким email уже существует`;
+          } else if (field === 'phone') {
+            userMessage = `Пользователь с таким телефоном уже существует`;
           } else {
             userMessage = `Пользователь с таким ${field} уже существует`;
           }
@@ -158,6 +185,66 @@ export class AdminService {
         throw error;
       }
       return error;
+    }
+  }
+
+  async getAllUsers(token: string) {
+    try {
+      // 1. Проверяем токен
+      let decodedToken: any;
+      try {
+        decodedToken = this.jwtService.verify(token);
+      } catch (error) {
+        throw new UnauthorizedException('Недействительный токен');
+      }
+
+      // 2. Проверяем роль
+      if (decodedToken.role !== 'ADMIN') {
+        throw new ForbiddenException(
+          'Доступ запрещен. Требуются права администратора',
+        );
+      }
+
+      // 3. Получаем всех пользователей
+      const users = await this.prisma.prisma.user.findMany({
+        select: {
+          id: true,
+          login: true,
+          email: true,
+          firstName: true,
+          lastName: true,
+          patronymic: true,
+          role: true,
+          gender: true,
+          city: true,
+          phone: true,
+          dateOfBirth: true,
+          typeOfWork: true,
+          isActive: true, // 👈 Добавляем
+          createdAt: true,
+          UpdatedAt: true, // 👈 С большой буквы U
+        },
+        orderBy: {
+          createdAt: 'desc',
+        },
+      });
+
+      return {
+        success: true,
+        users: users,
+        total: users.length,
+      };
+    } catch (error) {
+      if (
+        error instanceof UnauthorizedException ||
+        error instanceof ForbiddenException
+      ) {
+        throw error;
+      }
+      console.error('Ошибка при получении пользователей:', error);
+      throw new InternalServerErrorException(
+        'Произошла ошибка при получении пользователей',
+      );
     }
   }
 }

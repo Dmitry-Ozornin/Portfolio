@@ -1,6 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/lib/axios";
 import { useAuth } from "@/contexts/AuthContext";
@@ -14,8 +14,9 @@ type FormData = {
 
 export default function Login() {
   const router = useRouter();
-  const { setUser } = useAuth();
+  const { setUser, user, isLoading } = useAuth();
   const [serverError, setServerError] = useState<string | null>(null);
+  const [redirecting, setRedirecting] = useState(false);
 
   const {
     register,
@@ -36,22 +37,6 @@ export default function Login() {
 
       if (response.data.success) {
         setUser(response.data.user);
-
-        // Редирект по роли
-        switch (response.data.user.role) {
-          case "ADMIN":
-            router.push("/admin");
-            break;
-          case "MANAGER":
-            router.push("/manager");
-            break;
-          case "WORKER":
-            router.push("/worker");
-            break;
-          default:
-            setServerError("Неизвестная роль пользователя");
-            break;
-        }
       }
     } catch (error) {
       console.error("Ошибка:", error);
@@ -63,6 +48,47 @@ export default function Login() {
       }
     }
   };
+
+  useEffect(() => {
+    if (!isLoading && user && !redirecting) {
+      setRedirecting(true);
+      switch (user.role) {
+        case "ADMIN":
+          router.replace("/admin");
+          break;
+        case "MANAGER":
+          router.replace("/manager");
+          break;
+        case "WORKER":
+          router.replace("/worker");
+          break;
+        default:
+          router.replace("/");
+          break;
+      }
+    }
+  }, [user, isLoading, router, redirecting]);
+
+  if (isLoading) {
+    return (
+      <section className={styles.loginContainer}>
+        <article className={styles.login}>
+          <h1 className={styles.login__title}>Загрузка...</h1>
+        </article>
+      </section>
+    );
+  } else {
+  }
+
+  if (user) {
+    return (
+      <section className={styles.loginContainer}>
+        <article className={styles.login}>
+          <h1 className={styles.login__title}>Загрузка...</h1>
+        </article>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.loginContainer}>

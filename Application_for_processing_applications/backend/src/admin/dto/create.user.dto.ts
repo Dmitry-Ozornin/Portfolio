@@ -18,8 +18,8 @@ export enum UserRole {
   MANAGER = 'MANAGER',
 }
 export enum GenderEnum{
-  MALE = "мужской",
-  FEMALE = "женский",
+  MALE = "Мужской",
+  FEMALE = "Женский",
 }
 
 export class CreateUserDTO {

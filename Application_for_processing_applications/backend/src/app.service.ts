@@ -9,7 +9,7 @@ import { PrismaService } from './prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
-import { first } from 'rxjs';
+
 
 @Injectable()
 export class AppService {
@@ -83,6 +83,7 @@ export class AppService {
       );
     }
   }
+  
 
   verifyToken(token: string) {
     return this.jwtService.verify(token);

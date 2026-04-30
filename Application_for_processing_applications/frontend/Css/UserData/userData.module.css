@@ -1,0 +1,86 @@
+.userData {
+  width: 100%;
+}
+
+.tableHeader {
+  display: flex;
+}
+.tableHeader__title {
+  border: 1px solid black;
+  padding-left: 5px;
+  font-weight: 700;
+}
+.tableHeader__title_ID {
+  width: 120px;
+  word-break: break-all;
+}
+.tableHeader__title_Name {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_SecondName {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_Patronymic {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_Gender {
+  width: 130px;
+  word-break: break-all;
+}
+.tableHeader__title_Phone {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_Email {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_Role {
+  width: 100px;
+  word-break: break-all;
+}
+.tableHeader__title_TypeOfWork {
+  width: 250px;
+  word-break: break-all;
+}
+.tableHeader__title_City {
+  width: 150px;
+  word-break: break-all;
+}
+.tableHeader__title_dateOfBirthday {
+  width: 150px;
+  word-break: break-all;
+}
+.tableHeader__title_IsActive {
+  width: 200px;
+  word-break: break-all;
+}
+.tableHeader__title_Actions {
+  width: 150px;
+  word-break: break-all;
+}
+.tableHeader__title_Login {
+  width: 150px;
+  word-break: break-all;
+}
+.tableHeader__title_CreateData {
+  width: 160px;
+}
+.tableHeader__title_ChangeData {
+  width: 160px;
+}
+
+.filtersGrid {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=userData.module.css.map */

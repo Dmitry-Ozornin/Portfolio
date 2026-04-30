@@ -26,44 +26,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  // Проверка токен при загрузке
   useEffect(() => {
     const checkAuth = async () => {
       try {
         const { data } = await api.get("/me");
         setUser(data);
-
-        // Если пользователь авторизован и пытается зайти на на страницу логина
-        if (window.location.pathname === "/login") {
-          switch (data.role) {
-            case "ADMIN":
-              router.push("/admin");
-              break;
-            case "MANAGER":
-              router.push("/manager");
-              break;
-            case "WORKER":
-              router.push("/worker");
-              break;
-            default:
-              router.push("/");
-              break;
-          }
-        }
       } catch (error) {
         console.log("Ошибка доступа");
         setUser(null);
-        // Если не на странице логина, редирект туда
-        if (window.location.pathname !== "/") {
-          router.push("/");
-        }
       } finally {
         setIsLoading(false);
       }
     };
 
     checkAuth();
-  }, [router]);
+  }, []);
 
   const logout = async () => {
     try {
@@ -72,7 +49,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.error("Logout error:", error);
     } finally {
       setUser(null);
-      router.push("/login");
+      router.push("/");
     }
   };
 

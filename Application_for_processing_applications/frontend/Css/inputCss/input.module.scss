@@ -1,0 +1,83 @@
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.jello-horizontal {
+  animation: jello-horizontal 0.8s both;
+}
+
+.errors {
+  &__Input {
+    border-color: red;
+  }
+  &__Text {
+    color: red;
+    font-size: 18px;
+  }
+}
+.successBox {
+  color: green;
+  font-size: 22px;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  &__inputBox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+    &__inputTitle {
+      font-size: 22px;
+      width: 400px;
+    }
+    &__inputText {
+      width: 400px;
+      padding: 5px;
+      font-size: 20px;
+    }
+    &__checkBox {
+      font-size: 20px;
+      padding: 5px;
+      width: 217px;
+    }
+  }
+  &__button {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: black;
+    color: white;
+
+    &:active {
+      transform: scale(0.85);
+    }
+  }
+}
