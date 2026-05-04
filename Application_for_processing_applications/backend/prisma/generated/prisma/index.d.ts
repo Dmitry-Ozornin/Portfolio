@@ -909,7 +909,7 @@ export namespace Prisma {
     phone: string | null
     isActive: boolean | null
     createdAt: Date | null
-    UpdatedAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -927,7 +927,7 @@ export namespace Prisma {
     phone: string | null
     isActive: boolean | null
     createdAt: Date | null
-    UpdatedAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -946,7 +946,7 @@ export namespace Prisma {
     typeOfWork: number
     isActive: number
     createdAt: number
-    UpdatedAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -966,7 +966,7 @@ export namespace Prisma {
     phone?: true
     isActive?: true
     createdAt?: true
-    UpdatedAt?: true
+    updatedAt?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -984,7 +984,7 @@ export namespace Prisma {
     phone?: true
     isActive?: true
     createdAt?: true
-    UpdatedAt?: true
+    updatedAt?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -1003,7 +1003,7 @@ export namespace Prisma {
     typeOfWork?: true
     isActive?: true
     createdAt?: true
-    UpdatedAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -1095,7 +1095,7 @@ export namespace Prisma {
     typeOfWork: string[]
     isActive: boolean
     createdAt: Date
-    UpdatedAt: Date
+    updatedAt: Date
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -1131,7 +1131,7 @@ export namespace Prisma {
     typeOfWork?: boolean
     isActive?: boolean
     createdAt?: boolean
-    UpdatedAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1150,7 +1150,7 @@ export namespace Prisma {
     typeOfWork?: boolean
     isActive?: boolean
     createdAt?: boolean
-    UpdatedAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1169,7 +1169,7 @@ export namespace Prisma {
     typeOfWork?: boolean
     isActive?: boolean
     createdAt?: boolean
-    UpdatedAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1188,10 +1188,10 @@ export namespace Prisma {
     typeOfWork?: boolean
     isActive?: boolean
     createdAt?: boolean
-    UpdatedAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "login" | "password" | "role" | "email" | "gender" | "firstName" | "lastName" | "patronymic" | "dateOfBirth" | "city" | "phone" | "typeOfWork" | "isActive" | "createdAt" | "UpdatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "login" | "password" | "role" | "email" | "gender" | "firstName" | "lastName" | "patronymic" | "dateOfBirth" | "city" | "phone" | "typeOfWork" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1212,7 +1212,7 @@ export namespace Prisma {
       typeOfWork: string[]
       isActive: boolean
       createdAt: Date
-      UpdatedAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1651,7 +1651,7 @@ export namespace Prisma {
     readonly typeOfWork: FieldRef<"User", 'String[]'>
     readonly isActive: FieldRef<"User", 'Boolean'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
-    readonly UpdatedAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
     
 
@@ -2053,7 +2053,7 @@ export namespace Prisma {
     typeOfWork: 'typeOfWork',
     isActive: 'isActive',
     createdAt: 'createdAt',
-    UpdatedAt: 'UpdatedAt'
+    updatedAt: 'updatedAt'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -2173,7 +2173,7 @@ export namespace Prisma {
     typeOfWork?: StringNullableListFilter<"User">
     isActive?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
-    UpdatedAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
   }
 
   export type UserOrderByWithRelationInput = {
@@ -2192,7 +2192,7 @@ export namespace Prisma {
     typeOfWork?: SortOrder
     isActive?: SortOrder
     createdAt?: SortOrder
-    UpdatedAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -2214,7 +2214,7 @@ export namespace Prisma {
     typeOfWork?: StringNullableListFilter<"User">
     isActive?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
-    UpdatedAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
   }, "id" | "login" | "email" | "phone">
 
   export type UserOrderByWithAggregationInput = {
@@ -2233,7 +2233,7 @@ export namespace Prisma {
     typeOfWork?: SortOrder
     isActive?: SortOrder
     createdAt?: SortOrder
-    UpdatedAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -2258,7 +2258,7 @@ export namespace Prisma {
     typeOfWork?: StringNullableListFilter<"User">
     isActive?: BoolWithAggregatesFilter<"User"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
-    UpdatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
   export type UserCreateInput = {
@@ -2277,7 +2277,7 @@ export namespace Prisma {
     typeOfWork?: UserCreatetypeOfWorkInput | string[]
     isActive?: boolean
     createdAt?: Date | string
-    UpdatedAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUncheckedCreateInput = {
@@ -2296,7 +2296,7 @@ export namespace Prisma {
     typeOfWork?: UserCreatetypeOfWorkInput | string[]
     isActive?: boolean
     createdAt?: Date | string
-    UpdatedAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUpdateInput = {
@@ -2315,7 +2315,7 @@ export namespace Prisma {
     typeOfWork?: UserUpdatetypeOfWorkInput | string[]
     isActive?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    UpdatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateInput = {
@@ -2334,7 +2334,7 @@ export namespace Prisma {
     typeOfWork?: UserUpdatetypeOfWorkInput | string[]
     isActive?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    UpdatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserCreateManyInput = {
@@ -2353,7 +2353,7 @@ export namespace Prisma {
     typeOfWork?: UserCreatetypeOfWorkInput | string[]
     isActive?: boolean
     createdAt?: Date | string
-    UpdatedAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUpdateManyMutationInput = {
@@ -2372,7 +2372,7 @@ export namespace Prisma {
     typeOfWork?: UserUpdatetypeOfWorkInput | string[]
     isActive?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    UpdatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -2391,7 +2391,7 @@ export namespace Prisma {
     typeOfWork?: UserUpdatetypeOfWorkInput | string[]
     isActive?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    UpdatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -2487,7 +2487,7 @@ export namespace Prisma {
     typeOfWork?: SortOrder
     isActive?: SortOrder
     createdAt?: SortOrder
-    UpdatedAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -2505,7 +2505,7 @@ export namespace Prisma {
     phone?: SortOrder
     isActive?: SortOrder
     createdAt?: SortOrder
-    UpdatedAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -2523,7 +2523,7 @@ export namespace Prisma {
     phone?: SortOrder
     isActive?: SortOrder
     createdAt?: SortOrder
-    UpdatedAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {

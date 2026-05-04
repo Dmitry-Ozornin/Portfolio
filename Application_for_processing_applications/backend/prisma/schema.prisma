@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "./generated/prisma"
+  output   = "./generated/prisma"
 }
 
 datasource db {
@@ -8,23 +8,22 @@ datasource db {
 }
 
 model User {
-  id       String   @id @default(cuid())
-  login    String   @unique
-  password String 
-  role     UserRole
-  email    String?  @unique
-  gender   String
-  firstName String
-  lastName String
-  patronymic String?
+  id          String    @id @default(cuid())
+  login       String    @unique
+  password    String
+  role        UserRole
+  email       String?   @unique
+  gender      String
+  firstName   String
+  lastName    String
+  patronymic  String?
   dateOfBirth DateTime?
-  city String
-  phone String? @unique
-  typeOfWork String[] @default([])
-  isActive Boolean @default(true) 
-  createdAt DateTime @default(now())
-  UpdatedAt DateTime @updatedAt
-
+  city        String
+  phone       String?   @unique
+  typeOfWork  String[]  @default([])
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   @@map("users")
 }

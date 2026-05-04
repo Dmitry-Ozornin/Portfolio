@@ -8,6 +8,7 @@ import { ReactNode } from "react";
 export enum PageTitle {
   createUser = "Создание пользователя",
   users = "База пользователей",
+  changeUser = "Изменение пользователя",
 }
 
 export default function Header() {
@@ -15,6 +16,9 @@ export default function Header() {
   const { logout, user } = useAuth();
 
   const getTitle = (): string => {
+    if (pathName.startsWith("/admin/users/") && pathName !== "/admin/users") {
+      return PageTitle.changeUser;
+    }
     switch (pathName) {
       case "/admin":
         return `Добро пожаловать, ${user?.firstName}`;
@@ -22,6 +26,7 @@ export default function Header() {
         return PageTitle.createUser;
       case "/admin/users":
         return PageTitle.users;
+
       default:
         return "";
     }

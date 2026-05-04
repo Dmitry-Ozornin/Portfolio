@@ -136,7 +136,7 @@ exports.Prisma.UserScalarFieldEnum = {
   typeOfWork: 'typeOfWork',
   isActive: 'isActive',
   createdAt: 'createdAt',
-  UpdatedAt: 'UpdatedAt'
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {

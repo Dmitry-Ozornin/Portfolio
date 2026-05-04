@@ -148,20 +148,9 @@ export class AdminService {
   async changeDataOfUser(updatedData: Partial<CreateUserDTO>) {
     try {
       let user;
+      console.log(updatedData);
 
-      if (updatedData.login) {
-        user = await this.prisma.prisma.user.findUnique({
-          where: { login: updatedData.login },
-        });
-      } else if (updatedData.email) {
-        user = await this.prisma.prisma.user.findUnique({
-          where: { email: updatedData.email },
-        });
-      } else if (updatedData.phone) {
-        user = await this.prisma.prisma.user.findUnique({
-          where: { phone: updatedData.phone },
-        });
-      } else if (updatedData.id) {
+      if (updatedData.id) {
         user = await this.prisma.prisma.user.findUnique({
           where: { id: updatedData.id },
         });
@@ -220,9 +209,9 @@ export class AdminService {
           phone: true,
           dateOfBirth: true,
           typeOfWork: true,
-          isActive: true, // 👈 Добавляем
+          isActive: true,
           createdAt: true,
-          UpdatedAt: true, // 👈 С большой буквы U
+          updatedAt: true,
         },
         orderBy: {
           createdAt: 'desc',

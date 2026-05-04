@@ -14,23 +14,24 @@ const {
 } = require('c:/work/portfolio/Application_for_processing_applications/backend/prisma/generated/prisma');
 
 @Injectable()
-export class PrismaService  {
+export class PrismaService implements OnModuleInit, OnModuleDestroy {
   public prisma: any;
   private readonly logger = new Logger(PrismaService.name);
+  private pool: Pool;
 
   constructor() {
     // Настройка пула для Supabase (используем DIRECT_URL для прямой связи)
-    const pool = new Pool({
-      connectionString: process.env.DIRECT_URL, 
+    this.pool = new Pool({
+      connectionString: process.env.DIRECT_URL,
       ssl: {
-        rejectUnauthorized: false, 
+        rejectUnauthorized: false,
       },
       max: 20,
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 10000,
     });
 
-    const adapter = new PrismaPg(pool);
+    const adapter = new PrismaPg(this.pool);
 
     this.prisma = new PrismaClient({
       adapter,
@@ -54,6 +55,7 @@ export class PrismaService  {
 
   async onModuleDestroy() {
     await this.prisma.$disconnect();
+    await this.pool.end();
     this.logger.log('Disconnected from Supabase');
   }
 }
