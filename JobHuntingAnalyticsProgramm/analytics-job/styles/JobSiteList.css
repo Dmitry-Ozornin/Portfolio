@@ -1,0 +1,23 @@
+.JobSiteList {
+  justify-content: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.JobSiteList__siteBox {
+  min-width: 300px;
+  display: flex;
+  border-bottom: 2px solid;
+  border-color: #667eea;
+  align-items: center;
+}
+.JobSiteList__siteBox__id {
+  width: 30px;
+  text-align: left;
+}
+.JobSiteList__siteBox__siteName {
+  width: 150px;
+  text-align: left;
+  word-break: break-all;
+}/*# sourceMappingURL=JobSiteList.css.map */
