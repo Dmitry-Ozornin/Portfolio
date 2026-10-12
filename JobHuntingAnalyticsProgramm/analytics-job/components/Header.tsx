@@ -7,6 +7,7 @@ const Header = () => {
       <Link href="/">Главная</Link>
       <Link href="/job_website">Площадки</Link>
       <Link href="/settings">Настройки</Link>
+      <Link href="/analytics">Аналитика</Link>
     </header>
   );
 };

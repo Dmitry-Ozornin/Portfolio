@@ -37,6 +37,7 @@ const AddJobSiteForm = () => {
       form.reset();
       setIsOpen(false);
     } catch (err) {
+      console.log(err);
       setError(err instanceof Error ? err.message : "Не удалось добавить площадку");
     } finally {
       setIsSubmitting(false);

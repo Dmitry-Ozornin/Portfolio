@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "@/store/dataSlice";
+import analyticsReducer from "@/store/AnalyticsSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       jobSites: dataReducer,
+      Analytics: analyticsReducer,
     },
   });
 };

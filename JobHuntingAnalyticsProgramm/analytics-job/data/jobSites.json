@@ -38,5 +38,20 @@
     "id": 8,
     "siteName": "wegggggggggggggggggggggggggggggggggggggggggggggggg",
     "urlSite": "http://localhost:3000/job_website"
+  },
+  {
+    "id": 9,
+    "siteName": "ауцацац",
+    "urlSite": "https://archeage.ru/cart"
+  },
+  {
+    "id": 10,
+    "siteName": "fwffw",
+    "urlSite": "https://github.com/Dmitry-Ozornin/Portfolio/tree/main/JobHuntingAnalyticsProgramm/analytics-job"
+  },
+  {
+    "id": 11,
+    "siteName": "efwfwe",
+    "urlSite": "http://localhost:3000/job_website"
   }
 ]

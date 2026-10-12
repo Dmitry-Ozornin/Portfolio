@@ -1,13 +1,12 @@
 "use client";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchJobSites, createJobSite } from "@/store/dataSlice";
-import type { RootState, AppDispatch } from "@/store/store";
+import { fetchJobSites} from "@/store/dataSlice";
 import "@/styles/JobSiteList.css";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 export default function SitesPage() {
-  const dispatch = useDispatch<AppDispatch>();
-  const { sites, status, error } = useSelector((s: RootState) => s.jobSites);
+  const dispatch = useAppDispatch();
+  const { sites, status, error } = useAppSelector((s) => s.jobSites);
 
   useEffect(() => {
     dispatch(fetchJobSites());
